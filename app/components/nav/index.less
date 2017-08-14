@@ -1,12 +1,14 @@
 nav{
     color : red;
-    ul{
+    ul.navbar{
         li{
-            float: left;
-            width:100px;
             list-style: none;
-            &.cur{
-                background:blue;
+            a{
+                padding:10px;
+                &:hover,&:active{
+                    text-decoration: none;
+                    border-bottom: 0;
+                }
             }
         }
     }

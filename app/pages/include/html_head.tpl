@@ -4,6 +4,7 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fe_empty</title>
+    <link rel="stylesheet" href="/res/vendor/bootstrap/css/bootstrap.min.css" />
     <script src="/res/module/jquery/jquery-1.11.1.min.js"></script>
     <script src="/res/module/requirejs/requirejs.js"></script>
     <script>

@@ -1,13 +1,16 @@
 nav {
   color: red;
 }
-nav ul li {
-  float: left;
-  width: 100px;
+nav ul.navbar li {
   list-style: none;
 }
-nav ul li.cur {
-  background: blue;
+nav ul.navbar li a {
+  padding: 10px;
+}
+nav ul.navbar li a:hover,
+nav ul.navbar li a:active {
+  text-decoration: none;
+  border-bottom: 0;
 }
 nav .clearfix {
   clear: both;

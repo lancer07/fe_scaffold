@@ -4,13 +4,25 @@
 <body>
     <link rel="stylesheet" href="./index.css" />
     <p>i am home.</p>
+
     <link href="/components/nav/index.tpl?__inline" rel="import" />
-    <a href="/pages/about/">go to about</a>
-    
-    <a href="/pages/contact/sh">go to SH</a>
-    
-    <br />
-    <button id="btn" type="button" class="btn btn-success">click me</button>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">   
+            <link href="/components/tree/index.tpl?__inline" rel="import" />
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <ul class="list-group">
+                <li class="list-group-item"><a href="/pages/about/">go to about</a></li>
+                <li class="list-group-item"><a href="/pages/contact/sh">go to SH</a></li>
+                <li class="list-group-item"><a href="/pages/contact/en/usa">go to USA</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <button id="btn" type="button" class="btn btn-success">
+        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> click me
+    </button>
     <div id="message"></div>
     
     <script type="text/html" id="tplAutoApproval">

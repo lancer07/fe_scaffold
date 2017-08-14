@@ -4,9 +4,13 @@ define([
 function(){
 	$(document.body).delegates({
         'nav li' : function(){
-            $(this).addClass('cur').siblings().removeClass('cur');
+		$(this).addClass('active').siblings().removeClass('active');
+		var nav = $(this).text();
+		$.changeHash({
+			nav : nav
+		});
         }
 	}).ready(function(){
-		$("nav li").removeClass('cur').last().addClass('cur');
+		$("nav li").last().click();
 	});
 });
