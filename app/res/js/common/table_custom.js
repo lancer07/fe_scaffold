@@ -5,8 +5,8 @@
  * 2. 用户初次打开页面，显示的列，是直接从后台打过来的变量，没有接口。将来可以更新下这个地方。
  */
 define([
-	"js/common/table_new",
-	"js/common/jquery-tools"], function(base_table){
+	"res/js/common/table_new",
+	"res/js/common/jquery-tools"], function(base_table){
 		var $ = window.jQuery,
 			table_custom = $.extend(true, {}, base_table),
 			initFunc = base_table.init;

@@ -1,4 +1,4 @@
-define('js/common/group-range', [], function(){
+define('res/js/common/group-range', [], function(){
     (function($){
         $.fn.groupRange = function(groupList){
             

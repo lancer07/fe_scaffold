@@ -1,6 +1,6 @@
-define('js/common/search', [
-	'js/common/jquery-tools',
-	'js/common/ipfilter'
+define('res/js/common/search', [
+	'res/js/common/jquery-tools',
+	'res/js/common/ipfilter'
 ], function() {
 	var search = {
 		type: null,

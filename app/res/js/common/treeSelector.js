@@ -1,4 +1,4 @@
-define("js/common/treeSelector",[],function(){
+define("res/js/common/treeSelector",[],function(){
 	function triggerRender(container, treeUrl, cacheKey){
 			$(document).trigger("renderTreeSelector",{
 						container: container,

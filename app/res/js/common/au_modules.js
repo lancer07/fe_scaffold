@@ -1,5 +1,5 @@
 /*project: skylar - version: 6.0.0*/
-define("js/common/au_modules", function() {
+define("res/js/common/au_modules", function() {
 
 	var modules_name = {
         "com_ent_softmgr":           "软件管家",

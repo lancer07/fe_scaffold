@@ -1,4 +1,4 @@
-define("js/common/groupMentionsInput", ['js/common/treeUtil'], function(treeUtil){
+define("res/js/common/groupMentionsInput", ['res/js/common/treeUtil'], function(treeUtil){
     var treeDataMapUrl = {};
     var onSelect = null;
     $.fn.mentionsInput = function(fn){

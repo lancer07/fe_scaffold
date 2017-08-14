@@ -1,4 +1,4 @@
-define('js/common/table', ['js/common/tab', 'js/common/jquery-tools', 'js/common/pager', 'js/common/popup'], function(tab) {
+define('res/js/common/table', ['res/js/common/tab', 'res/js/common/jquery-tools', 'res/js/common/pager', 'res/js/common/popup'], function(tab) {
 	$.tableFieldSort = $.Class(function(changeHash) {
 		var getType = function(table) {
 			var obj = $.changeHash();

@@ -1,4 +1,4 @@
-define('js/common/importqsert', ['js/common/au_modules', 'js/common/jquery-tools', 'module/webuploader/webuploader'], function(certUtil) {
+define('res/js/common/importqsert', ['res/js/common/au_modules', 'res/js/common/jquery-tools', 'module/webuploader/webuploader'], function(certUtil) {
 	
 	if (!CERT_INFO.hasModuleName){	//添加模块名称
         certUtil.addModuleName(CERT_INFO);

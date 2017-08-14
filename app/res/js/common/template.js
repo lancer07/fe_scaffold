@@ -1,4 +1,4 @@
-define('js/common/template',function() {
+define('res/js/common/template',function() {
 /**
  * @license
  * (c) 2012 Mikhail Davydov <http://azproduction.ru>

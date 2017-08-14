@@ -1,4 +1,4 @@
-define('js/common/highcharts',['module/highcharts-4.1.4/highcharts'],function(HighCharts){
+define('res/js/common/highcharts',['module/highcharts-4.1.4/highcharts'],function(HighCharts){
 	var charts = {
 		config :{},
 		drawCharts:function(config){

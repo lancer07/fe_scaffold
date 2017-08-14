@@ -1,4 +1,4 @@
-define("js/common/accordion",[], function() {
+define("res/js/common/accordion",[], function() {
 
 	(function($) {
 		$.fn.accordion = function(options) {

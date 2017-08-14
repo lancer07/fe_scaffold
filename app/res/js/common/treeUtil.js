@@ -1,4 +1,4 @@
-define('js/common/treeUtil', [], function(){
+define('res/js/common/treeUtil', [], function(){
     var GROUP_URL = "/client/group/usergrouptree";
     /**
      * [cacheTreeData 将数据缓存到localStorage]

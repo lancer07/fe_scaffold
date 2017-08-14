@@ -1,4 +1,4 @@
-define('js/common/pager',['js/common/jquery-tools'],function(){
+define('res/js/common/pager',['res/js/common/jquery-tools'],function(){
     $.pager = $.Class(function() {
         return {
             jump: function() {

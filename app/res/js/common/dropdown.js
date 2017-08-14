@@ -1,4 +1,4 @@
-define('js/common/dropdown', function() {
+define('res/js/common/dropdown', function() {
 	// var dropdown = {
 	// 	init:function(){
 	// 		if($('.dropdown').length === 0){

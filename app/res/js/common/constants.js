@@ -1,4 +1,4 @@
-define('js/common/constants', [], function() {
+define('res/js/common/constants', [], function() {
 
     return {
         PC: ['6.3.0', '6.2.0', '6.1.0', '6.0.0', '5.1.0'],

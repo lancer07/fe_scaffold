@@ -1,7 +1,7 @@
 define([
-	'/res/js/common/jquery-tools'
+	'res/js/common/jquery-tools'
 ],
-function(template){
+function(){
 	$(document.body).delegates({
         'nav li' : function(){
             $(this).addClass('cur').siblings().removeClass('cur');

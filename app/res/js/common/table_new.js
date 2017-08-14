@@ -1,7 +1,7 @@
 define([
-    "js/common/tab",
-    "js/common/jquery-tools",
-    "js/common/popup"
+    "res/js/common/tab",
+    "res/js/common/jquery-tools",
+    "res/js/common/popup"
 ], function() {
     var $ = window.jQuery;
 

@@ -1,4 +1,4 @@
-define("js/common/message",["js/common/jquery-tools", "js/common/popup"], function(){
+define("res/js/common/message",["res/js/common/jquery-tools", "res/js/common/popup"], function(){
 
     var messages      = MSGS||{};
     var messageCount  = $("#messageCount");

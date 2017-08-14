@@ -1,4 +1,4 @@
-define('js/common/changepassword',['js/common/rsa-encrypt', 'js/login/qualify', 'js/common/jquery-tools'],function(rsaEncrypt, qualify){
+define('res/js/common/changepassword',['res/js/common/rsa-encrypt', 'js/login/qualify', 'res/js/common/jquery-tools'],function(rsaEncrypt, qualify){
 	var changepassword ={
 		interval:null,
 		init:function(){

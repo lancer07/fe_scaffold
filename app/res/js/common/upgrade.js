@@ -1,4 +1,4 @@
-define('js/common/upgrade',[],function(){
+define('res/js/common/upgrade',[],function(){
 
 	'use strict';
 
@@ -47,7 +47,7 @@ define('js/common/upgrade',[],function(){
 				case "CHECK_UPGRADE" :
 					var data = {
 						title: '检查更新',
-						message: '<div><span>正在检查' + self.name + '是否有可用更新：</span><div><img  src="/res/img/js/common/upgrade_loading.gif" classs="check_upgrade_loading"/></div></div>',
+						message: '<div><span>正在检查' + self.name + '是否有可用更新：</span><div><img  src="/res/img/res/js/common/upgrade_loading.gif" classs="check_upgrade_loading"/></div></div>',
 						confirm_text: '后台检查',
 						cancel_text: '取消',
 						confirm_trigger: function(){
@@ -177,7 +177,7 @@ define('js/common/upgrade',[],function(){
 				case "UPGRADING":
 					var data = {
 						title: '正在升级',
-						message: '<div><p>' + self.name + '正在升级，请耐心等待升级完成！</p><p><img  src="/res/img/js/common/upgrade_loading.gif" classs="check_upgrade_loading"/></p></div>',
+						message: '<div><p>' + self.name + '正在升级，请耐心等待升级完成！</p><p><img  src="/res/img/res/js/common/upgrade_loading.gif" classs="check_upgrade_loading"/></p></div>',
 						confirm_text: '后台升级',
 						confirm_trigger: function(){
 							self.hideBox()

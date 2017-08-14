@@ -1,6 +1,6 @@
 define([
-    '/res/js/common/template',
-	'/res/js/common/jquery-tools'
+    'res/js/common/template',
+	'res/js/common/jquery-tools'
 ],
 function(template){
 	$(document.body).delegates({
@@ -30,6 +30,6 @@ function(template){
             $("#message").html(tplAutoApproval);
         }
 	}).ready(function(){
-
+        
 	});
 });

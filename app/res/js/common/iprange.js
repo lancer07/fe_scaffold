@@ -1,4 +1,4 @@
-define('js/common/iprange', function() {
+define('res/js/common/iprange', function() {
 
     (function($) {
         $.fn.checkIpRange = function() {

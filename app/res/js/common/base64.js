@@ -1,4 +1,4 @@
-define('js/common/base64', function() {
+define('res/js/common/base64', function() {
 	(function(){
 		var BASE64_MAPPING = [
 			'A','B','C','D','E','F','G','H',

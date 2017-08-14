@@ -1,6 +1,6 @@
-define('js/common/guidance', [
-	'js/common/jquery-tools',
-	'js/common/jquery-cookie'
+define('res/js/common/guidance', [
+	'res/js/common/jquery-tools',
+	'res/js/common/jquery-cookie'
 ], function() {
 	var $steps;
 	var $DOC      = $(document.body);

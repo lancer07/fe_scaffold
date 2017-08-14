@@ -1,6 +1,6 @@
-define('js/common/task', [
-	'js/common/jquery-tools',
-	'js/common/table',
+define('res/js/common/task', [
+	'res/js/common/jquery-tools',
+	'res/js/common/table',
 	'module/jquery-ui/jquery-ui'
 ], function() {
 	var LIMIT = 7;

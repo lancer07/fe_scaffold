@@ -1,4 +1,4 @@
-define('js/common/jquery-tools',function() {
+define('res/js/common/jquery-tools',function() {
 
     $.getJson = function(url, param, showLoading) {
         var def = $.Deferred();

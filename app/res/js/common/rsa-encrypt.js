@@ -1,4 +1,4 @@
-define('js/common/rsa-encrypt', ["module/jsencrypt/index.min"], function(JSEncrypt){
+define('res/js/common/rsa-encrypt', ["module/jsencrypt/index.min"], function(JSEncrypt){
 	var jsEncryptTool = JSEncrypt.JSEncrypt;
     var RSAPUBKEY = document.querySelector('#RSAPUBKEY').value;
 	

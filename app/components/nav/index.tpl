@@ -9,5 +9,5 @@
     <div class="clearfix"></div>
 </nav>
 <script>
-    require(['./index']);
+    require(['/components/nav/index.js']);
 </script>

@@ -1,28 +1,38 @@
-<link rel="stylesheet" href="./index.css" />
+<!DOCTYPE html>
+<html lang="en">
+<link href="/pages/include/html_head.tpl?__inline" rel="import" />
+<body>
+    <link rel="stylesheet" href="./index.css" />
+    <p>i am home.</p>
+    <link href="/components/nav/index.tpl?__inline" rel="import" />
+    <a href="/pages/about/">go to about</a>
+    
+    <a href="/pages/contact/sh">go to SH</a>
+    
+    <br />
+    <button id="btn" type="button" class="btn btn-success">click me</button>
+    <div id="message"></div>
+    
+    <script type="text/html" id="tplAutoApproval">
+        <div>
+            i am in template <%- name %>
+            <ul>
+                <% for (var i = 0; i < list.length; i++) { %>
+                    <%if (list[i].id != 3) { %>
+                        <li><%- list[i].id %></li>
+                    <% } %>    
+                <% } %>
+            </ul>
+        </div>
+    </script>
 
-<p>i am home.</p>
-<link href="components/nav/index.tpl?__inline" rel="import" />
-<a href="pages/about/">go to about</a>
+    <script>
+        require(['pages/home/index']);
+    </script>
+</body>
+</html>
 
-<a href="pages/contact/sh">go to SH</a>
 
-<br />
-<button id="btn" type="button" class="btn btn-success">click me</button>
-<div id="message"></div>
 
-<script type="text/html" id="tplAutoApproval">
-    <div>
-        i am in template <%- name %>
-        <ul>
-            <% for (var i = 0; i < list.length; i++) { %>
-                <%if (list[i].id != 3) { %>
-                    <li><%- list[i].id %></li>
-                <% } %>    
-            <% } %>
-        </ul>
-    </div>
-</script>
 
-<script>
-    require(['./index']);
-</script>
+

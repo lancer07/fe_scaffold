@@ -1,4 +1,4 @@
-define('js/common/nav', ['js/common/jquery-tools'], function() {
+define('res/js/common/nav', ['res/js/common/jquery-tools'], function() {
 	var nav = {
 		interval: null,
 		init: function() {
