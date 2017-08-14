@@ -1,0 +1,14 @@
+nav {
+  color: red;
+}
+nav ul li {
+  float: left;
+  width: 100px;
+  list-style: none;
+}
+nav ul li.cur {
+  background: blue;
+}
+nav .clearfix {
+  clear: both;
+}

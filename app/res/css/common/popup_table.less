@@ -1,0 +1,19 @@
+html,
+body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-body{
+    flex: 1 0 0px;
+    position: relative;
+    >.common-content-main{
+        // fix height 100% in flex box;
+        // see http://stackoverflow.com/questions/15381172/css-flexbox-child-height-100
+        position: absolute;
+    }
+}

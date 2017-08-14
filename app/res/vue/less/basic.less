@@ -1,0 +1,187 @@
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .9s
+}
+.fade-enter, .fade-leave-active {
+    opacity: 0
+}
+
+input[type=text], input[type=password] {
+    height:26px;
+    width:50px;
+    border:1px solid #ccc;
+    /*border-radius(2px);*/
+    &.long{
+        width: 120px;
+    }
+    &.toolong{
+        width:250px;
+    }
+}
+
+select {
+    // margin: 0 0.2em;
+    vertical-align: baseline;
+    height:28px;
+    border:1px solid #ccc;
+    max-width: 150px;
+    /*.border-radius(2px);*/
+    &.num{
+        width: 2em;
+    }
+    &.ip{
+        width: 9em;
+    }
+    &.max-width{
+        width: 98%;
+    }
+}
+
+label{
+    color: #666;
+    font-size: 12px;
+    line-height: 26px;
+    margin-right: 15px;
+    input[type=radio] {
+        vertical-align: text-top;
+        margin-right: 4px;
+    }
+}
+
+button.disabled{
+    color: #999;
+    &.btn {
+        &:hover{
+            background: #eff2f4;
+            color: #999;
+            cursor: not-allowed;
+            border:1px solid  #ccc;
+        }
+    }
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* 左侧列表，右侧内容的布局 */
+.dlp-tpl {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    .dlp-tpl-left {
+        flex: 0 0 180px;
+        height: 100%;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .dlp-tpl-right {
+        flex: 1;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        min-width: 920px;
+    }
+
+    .dlp-tpl-button-group {
+        height: 45px;
+        line-height: 45px;
+        padding-right: 9px;
+        align-self: flex-end;
+    }
+}
+
+/*  */
+.table-form {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    tr {
+        line-height: 40px;
+        height: 40px;
+    }
+}
+
+.table-list {
+    width: 100%;
+    table-layout: fixed;
+    border: solid 1px #e5e5e5;
+    border-collapse: collapse;
+    thead {
+        tr{
+            border: solid 1px #e5e5e5;
+            background: #FFF;
+            padding: 1px 0;
+        }
+        th{
+            background: #f1f4f7;
+            padding: 1px 0;
+            span{
+                display: block;
+                height: 100%;
+                line-height: 28px;
+                background: #FFF;
+                padding-left: 1em;
+            }
+        }
+    }
+    td, th{
+        line-height: 30px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    tr:nth-child(even) {
+        background: #f1f4f7;
+    }
+}
+
+.discvry-item, .ctrl-protect-item, .policy-section {
+    border-bottom: 1px solid #c0c0c0;
+    .discvry-item-title, .item-title {
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        vertical-align: top;
+        margin-top: 13px;
+    }
+    .discvry-item-content, .item-content {
+        display: inline-block;
+    }
+
+    .ctrl-item {
+        margin: 0 10px; 
+        display: inline-block; 
+        width: 160px;
+    }
+}
+
+/* 模板状态 */
+.tpl-status {
+    font-size: 18px;
+    font-weight: 400; 
+}
+
+.tpl-status-icon {
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("/res/img/setting/publish.png");
+}
+.tpl-unpublished {
+    background-image: none;
+}
+.tpl-published {
+    color: #82bd3e;
+    background-position: left -110px;
+}
+.tpl-overdue {
+    background-position: left -10px;
+}
+

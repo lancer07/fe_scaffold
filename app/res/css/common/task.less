@@ -1,0 +1,157 @@
+@import "../../less/all.less";
+.task-management{
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	height:21px;
+	margin:35px 0 0 25px;
+	background:#f1f1f1;
+	text-align: center;
+	.border-radius(10px);
+	font-size: 12px;
+	color:white;
+	line-height: 21px;
+	min-width: 120px;
+	overflow: hidden;
+	&.none{
+		display: none;
+	}
+	.no-task{
+		display: inline-block;
+		width:100%;
+		height: 100%;
+		vertical-align: top;
+		background:#82BD3E;
+		line-height: 20px;
+		.border-radius(10px);
+		padding:0;
+		i{
+			display: inline-block;
+			.size(15px,18px);
+			background-image: url(/res/img/common/task.png);
+			background-position: 236px 0;
+			margin-top: -1px;
+		}
+		b{
+			vertical-align: 3px;
+		}
+	}
+	.have-task{
+		top:0;
+		padding:0 6px;
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		color:#999;
+	}
+	.progress{
+		position:absolute;
+		background:#82BD3E;
+		.border-radius(10px 0 0 10px);
+		display: inline-block;
+		width:100%;
+		height: 21px;
+		z-index: 0;
+		left: -100%;
+		top:0;
+		&.compelted{
+			.border-radius(10px);
+		}
+		i{
+			float:right;
+			.size(8px,20px);
+		}
+	}
+}
+.taskFilter{
+	position: absolute;
+	bottom:0;
+	left: 12px;
+}
+.task-mask{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: 1048;
+	display: none;
+}
+.task-wrap{
+	.size(750px,405px);
+	position: absolute;
+	background:white;
+	z-index: 1049;
+	right:12px;
+	top:55px;
+	margin-left:-375px;
+	.common-content-main{
+		min-height: 0 !important;
+		margin-left:0 !important;
+	}
+	border-radius: 3px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	border: 1px solid #ccc;
+}
+.task-nav{
+	.clearfix();
+	overflow: hidden;
+	background:white;
+	color: #666666;
+	line-height: 40px;
+	border-bottom: solid 1px #d6d6d6;
+	cursor:move;
+	ul{
+		margin:0;
+		padding:0;
+	}
+	li,span{
+		float: left;
+		position: relative;
+		top: 1px;
+	}
+	li{
+		font-size: 14px;
+		cursor: pointer;
+		margin: 0 0.5em;
+		padding: 0 0.2em;
+		&.active{
+			color: #669900;
+			border-bottom: solid 2px #82bd3e;
+		}
+	}
+}
+.close-task{
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: url(/res/img/common/closetask.png);
+	top: 12px;
+	right: 9px;
+}
+.type-triangle{
+	cursor: pointer;
+	span{
+		.triangle(bottom,8px,#999,6px);
+	}
+}
+td a{
+	margin:0 3px;
+}
+.taskprogress{
+	display:block;
+	position: relative;
+	height:6px;
+	width:100px;
+	background:#f1f1f1;
+	span{
+		display: block;
+		position: absolute;
+		top:0;
+		left:0;
+		height:6px;
+		background-image: url(/res/img/common/taskprogress.png);
+		background-position: 0 17px;
+	}
+}

@@ -1,0 +1,30 @@
+.buttonDropdown{
+    display: inline-block;
+    .drop-menu{
+        position: absolute;
+        visibility: hidden;
+        z-index: 2;
+        background-color: white;
+        border:1px solid #e3e3e3;
+        li{
+
+            >a, .custom-column{
+                display: inline-block;
+                padding:8px 9px;
+                &.export{
+                    margin:0;
+                }
+                &:hover{
+                    color:white;
+                    background-color: #82bd3e;
+                }
+            }
+        }
+    }
+
+    &:hover{
+        .drop-menu{
+            visibility: visible;
+        }
+    }
+}

@@ -1,0 +1,164 @@
+@import '../../less/all.less';
+
+@liMarginRight:20px;
+@liHeight:70px;
+@iconWidth:50px;
+@iconHeight:50px;
+@fontfamily:'微软雅黑',FontAwesome,'Helvetica Neue',Arial,sans-serif ;
+@spriteUrl:url(/res/img/common/index_sprite.png);
+@spriteIcon:url(/res/img/login/useicon.png);
+.slider{
+	font-family: @fontfamily;
+	.nested-reset();
+	position: relative;
+	.picWrap{
+		overflow: hidden;
+		position: absolute;
+		z-index: 9;
+		top:22px;
+		ul{
+			.reset-list-style();
+			width:2000px;
+			position: absolute;
+			overflow: hidden;
+			left:0;
+			li{
+				float:left;
+				margin-right: @liMarginRight;
+				width:80px;
+				height:@liHeight;
+				text-align: center;
+				.clearfix();
+				span{
+					color:#666;
+					font-size: 12px;
+					display: block;
+					text-align: center;
+				}
+				.funcicon{
+					display: inline-block;	
+					width:@iconWidth;
+					height:@iconHeight;
+					background:@spriteIcon no-repeat;
+					&.exam{
+						background-position: 0 0;
+					}
+					&.virus_scan{
+						background-position: -100px 0;
+					}
+					&.leak_fix{
+						background-position: -200px 0;
+					}
+					&.xp_fix{
+						background-position: -300px 0;
+					}
+					&.pfs_tool{
+						background-position: 0 -100px;
+					}
+					&.address_mgr{
+						background-position: -100px -100px;
+					}
+					&.usb_mgr{
+						background-position: -200px -100px;
+					}
+					&.notice{
+						background-position: -300px -100px;
+					}
+					&.file{
+						background-position: 0 -200px;
+					}
+					&.report{
+						background-position: -100px -200px;
+					}
+					&.softwarebox{
+						background-position: -300px -200px;
+					}
+				}
+			}
+		}
+	}
+	
+	.slideBtn{
+		cursor: pointer;
+		display: none;
+		position: absolute;
+		margin:0 10%;
+		margin-top:22px;
+		.fa{font-size:24px;}
+		span{
+			display: inline-block;
+			font-size: 48px;
+			color: #ccc;
+			&.next{
+				float: right;
+			}
+			&:hover{
+				color: #82bd3e;
+				border-color:#82bd3e;
+			}
+		}
+		
+	}
+	.switchRadio{
+		position: absolute;
+		width: 100%;
+		text-align: center; 
+	}	
+}
+.usefun-setting{
+	list-style-type: none;
+	width:460px;
+	li{
+		float:left;
+		margin:10px;
+		width:90px;
+		height:70px;
+		text-align: center;
+		.clearfix();
+		label{
+			color:#666;
+			font-size: 12px;
+			text-align: center;
+		}
+		.funcicon{
+			margin:0 auto;
+			display: block;	
+			width:@iconWidth;
+			height:@iconHeight;
+			background:@spriteIcon no-repeat;
+			&.exam{
+				background-position: 0 0;
+			}
+			&.virus_scan{
+				background-position: -100px 0;
+			}
+			&.leak_fix{
+				background-position: -200px 0;
+			}
+			&.xp_fix{
+				background-position: -300px 0;
+			}
+			&.pfs_tool{
+				background-position: 0 -100px;
+			}
+			&.address_mgr{
+				background-position: -100px -100px;
+			}
+			&.usb_mgr{
+				background-position: -200px -100px;
+			}
+			&.notice{
+				background-position: -300px -100px;
+			}
+			&.file{
+				background-position: 0 -200px;
+			}
+			&.report{
+				background-position: -100px -200px;
+			}
+			&.softwarebox{
+				background-position: -300px -200px;
+			}
+		}
+	}
+}

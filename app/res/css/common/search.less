@@ -1,0 +1,125 @@
+@import "./variable.less";
+// 搜索框样式
+.skylar-search(){
+    .skylar-search{
+        height: @skylar_search_height;
+        line-height: @skylar_search_height;
+        margin: 0 20px;
+        padding: 0 0 0 4px;
+        border: 0;
+        font-size: 0;
+        color: #666;
+        background: #f7f8f9;
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: middle;
+        float: none;
+        >input,
+        >div,
+        >p,
+        >i{
+            height: 100%;
+            vertical-align: top;
+        }
+        span{
+            margin: 0 4px;
+        }
+        input{
+            border: 0;
+            padding: 0;
+            margin: 0 4px;
+            outline: 0;
+            font-size: 12px;
+            background: transparent;
+            line-height: @skylar_search_height;
+        }
+        .search-type{
+            font-size: 12px;
+            line-height: @skylar_search_height;
+        }
+        .pc-detail{
+            width: 180px;
+        }
+        .iprange{
+            width: auto;
+            margin: 0;
+            font-size: 0;
+            line-height: @skylar_search_height;
+            display: inline-block;
+            >span{
+                font-size: 12px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .ipfilter{
+                height: 2em;
+                padding: 0;
+                .ip{
+                    width: 3em;
+                    height: 100%;
+                    margin: 0;
+                    padding: 0 4px;
+                    line-height: 2;
+                    box-sizing: border-box;
+                    display: inline-block;
+                }
+            }
+        }
+        .fa-search, .fa-close{
+            width: 1em;
+            line-height: @skylar_search_height;
+            margin: 0 0.5em;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            position: static;
+            &:hover, &:active{
+                color: #82BD3E;
+            }
+        }
+        .search-options{
+            width: 1em;
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            .search-drop{
+                width: 0;
+                height: 0;
+                border: solid 0.4em #B9B9B9;
+                border-color: transparent #b9b9b9 #b9b9b9 transparent;
+                position: absolute;
+                bottom: 1px;
+                right: 1px;
+                background: none;
+            }
+            .option{
+                position: absolute;
+                display: none;
+                top: 100%;
+                right: 0;
+                background: #FFF;
+                overflow: hidden;
+                border: 0;
+                border-radius: 0 0 2px 2px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                z-index: 99;
+                p{
+                    margin: 0;
+                    padding: 0 1em;
+                    font-size: 12px;
+                    line-height: 30px;
+                    border-bottom: solid 1px #cccccc;
+                    cursor: pointer;
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+                    &:hover{
+                        color: #82BD3E;
+                    }
+                }
+            }
+        }
+    }
+}

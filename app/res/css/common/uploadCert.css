@@ -1,0 +1,155 @@
+html,
+body {
+  height: 100%;
+  background: #e5e8eb;
+  min-height: 700px;
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+
+.hwrap {
+  overflow: hidden;
+  background: #061b34 url("/res/img/login/login_bg.jpg") top center no-repeat;
+  border-bottom: #82bd3e solid 2px;
+}
+
+.hwrap>.header {
+  width: 1000px;
+  margin: 0 auto;
+  height: 348px;
+  overflow: hidden;
+}
+
+.hwrap>.header>.systemIcon {
+  margin: 14px 0 0 0;
+  display: inline-block;
+}
+
+.hwrap>.header>.right-tip {
+  opacity: .4;
+  filter: alpha(opacity=40);
+  margin-top: 5px;
+  text-align: right;
+  float: right;
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.hwrap>.header>.right-tip span {
+  margin: 0 4px;
+  float: right;
+}
+
+.hwrap>.header>.right-tip a {
+  color: #fff;
+  float: right;
+}
+
+.hwrap>.header>.right-tip p {
+  clear: both;
+  padding: 5px;
+  line-height: 12px;
+}
+
+.bwrap {
+  font-size: 12px;
+  text-align: center;
+  color: #333;
+}
+
+.bwrap .trial_auth {
+  padding: 0 .5em;
+  text-decoration: none;
+  color: #2196F3;
+}
+
+.bwrap .au-uploader {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 12px;
+  text-align: left;
+}
+
+.bwrap .au-uploader .upfile-error {
+  color: red;
+  display: none;
+}
+
+.bwrap .au-uploader .au-notice {
+  line-height: 30px;
+  color: #999;
+}
+
+.bwrap .au-uploader .au-notice span {
+  color: red;
+}
+
+.bwrap .au-uploader .upfile-info {
+  font-weight: bold;
+  line-height: 2;
+}
+
+.bwrap .au-uploader .upfile-states {
+  color: red;
+  line-height: 2;
+}
+
+.bwrap .au-uploader .upfile-states div {
+  display: none;
+}
+
+.bwrap .au-uploader>button {
+  display: none;
+}
+
+.bwrap .au-uploader .link {
+  color: #00b7ee;
+}
+
+.bwrap .au-uploader #picker-file {
+  height: 22px;
+}
+
+.bwrap .au-uploader #picker {
+  display: inline-block;
+}
+
+.bwrap .au-uploader #picker .webuploader-pick {
+  background: #eff2f4;
+  color: #666;
+  height: 27px;
+  border: 1px solid #ccc;
+  line-height: 27px;
+  vertical-align: middle;
+  padding: 0 15px;
+}
+
+.common-footer {
+  clear: both;
+}
+
+.common-footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+.dividingline_grey {
+  width: 1px;
+  background: #cccccc;
+  display: block;
+  height: 8px;
+  margin: 5px;
+  float: left;
+}
+
+.dividingline_grey2 {
+  width: 1px;
+  background: #4f5b6b;
+  display: block;
+  height: 8px;
+  margin: 1px 8px;
+  float: right;
+}

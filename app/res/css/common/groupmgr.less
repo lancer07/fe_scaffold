@@ -1,0 +1,279 @@
+@import "../../less/all.less";
+@import "./search.less";
+
+html,body{
+	height:100%;
+}
+
+.popup_group{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 196px;
+	height:-moz-calc(~'100% - 40px');
+	height:-webkit-calc(~'100% - 40px');
+	height:calc(~'100% - 40px');
+	*height:expression(100% - 40px);
+}
+.common-content-wrap{
+	margin-top:0px !important;
+	height:100%;
+}
+.common-content-main{
+	margin-left: 196px;
+}
+#addGroup{
+	display: block;
+	.border-radius(0px) !important;
+	width:196px;
+	transition: width 1s;
+}
+
+.common-content-tools {
+	height: 26px;
+	.skylar-search();
+	// .search-wrap {
+	// 	margin-top: -9px;
+	// 	height:42px;
+	// }
+	.search-options{
+		z-index:0;
+	}
+}
+
+.common-group{
+	border-right:1px solid #ccc;
+	width:180px;
+	min-width: 180px;
+	min-height:0;
+	height:100%;
+	h4{
+		border-bottom: 1px solid #ccc;
+	}
+}
+#import,#export{
+	position: absolute;
+	left: 0;
+	bottom:0;
+	width:98px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	padding:0;
+	border:0;
+	.border-radius(0);
+	border-right:1px solid #fff;
+	z-index: 8;     //导入导出按钮在终端树放大状态下应该可见，所以z-index应该比蒙版的z-index要打。蒙版取7，这里取8，与终端树z-index相等
+	transition: all 1s;
+
+}
+
+
+#export{
+	left: 98px;
+	bottom: 0px;
+	border-right:0;
+	transition: left 1s, width 1s;
+
+}
+
+.popup-body{
+	overflow:visible !important;
+	height:calc(~'100% - 41px');
+	*height:expression(100% - 41px);
+}
+.conflictList p{
+	padding-left:10px;
+}
+.import-box,.conflictList{
+	width:700px;
+	font-size: 12px;
+	color:#666666;
+	.import-mes{
+		margin:20px 30px 10px 30px;
+		.file_select{
+			input[type="file"]{
+				display: none;
+			}
+		}
+		p{
+			input{
+				margin-right:3px;
+			}
+		}
+		.importOption{
+			display: none;
+		}
+	}
+
+	.import-table{
+		display: none;
+		height:300px;
+		>div{
+			overflow: hidden;
+			overflow-y: auto;
+			height: 100%;
+			table{
+				width:100%;
+				table-layout: fixed;
+				thead{
+					height: 32px;
+					background: #f1f4f7;
+					tr{
+						height: 32px;
+						line-height: 32px;
+						th{
+							padding:0 0 0 10px;
+						}
+					}
+
+				}
+				tbody{
+					td{
+						padding:0 0 0 10px;
+						.ellipsis()
+					}
+				}
+			}
+		}
+	}
+	.bl{
+		display:block;
+	}
+	.button{
+		display: inline-block;
+		border:1px solid #ccc;
+		background: #eff2f4;
+		line-height: 22px;
+		padding: 0 13px;
+		color:#666;
+		.border-radius(2px);
+		&:hover{
+			background: #82bd3e;
+			color:white;
+		}
+	}
+}
+
+.download{
+	color:#5691d3;
+}
+.conflictList{
+	.import-table{
+		table{
+			thead{
+				width:700px;
+				tr{
+					th{
+						width: 100px;
+						&:last-child,&:nth-child(2){
+							width: 230px;
+						}
+					}
+				}
+			}
+			tbody{
+				tr{
+					td{
+						width:100px;
+						&:last-child,&:nth-child(2){
+							width: 230px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#groupManage{
+	display: none;
+}
+#group{
+	min-width: 200px;
+	margin-top:10px;
+	height:32px;
+}
+
+.groupUploading{
+	box-sizing: border-box;
+	border:1px solid #ccc;
+	font-size: 14px;
+	text-align: center;
+	position: absolute;
+	left: 257px;
+	width: 52px;
+	height: 24px;
+	box-sizing: border-box;
+	background-color: #eff2f4;
+	top: 0;
+	line-height: 24px;
+	.border-radius(3px);
+	i{
+		color:green;
+	}
+}
+
+
+// 选择分组的下拉框
+.group-dropdown{
+
+	width: 200px;
+	height: 28px;
+	cursor: pointer;
+	padding-left: 5px;
+	line-height: 28px;
+	border: solid 1px #CCC;
+	border-radius: 2px;
+	vertical-align: middle;
+	position: relative;
+	display: inline-block;
+	.selectedGroup{
+		display:inline-block;
+		width:192px;
+		.ellipsis();
+	}
+	&.disable{
+		color: #ccc;
+		cursor: default;
+	}
+	.common-group-container{
+		width: 205px;
+		max-height: 200px;
+		overflow: auto;
+		position: absolute;
+		top: 28px;
+		left: -1px;
+		background: #FFF;
+		border: solid 1px #CCC;
+		border-radius: 2px;
+		z-index: 99;
+		padding-left:2px;
+		.clearfix();
+		.selectable-group{
+			float: left;
+			min-width: 100%;
+			background: url(/res/img/common/active_bg.jpg) 0 -999px repeat-x;
+			.ztree{
+				max-height: 99999px;
+				margin: 0;
+				width: auto;
+				overflow: visible;
+				background: url(/res/img/common/active_bg.jpg) 0 -999px repeat-x;
+				span.switch:before{
+					margin-left: 0;
+				}
+				ul{
+					padding-left: 28px;
+					margin-bottom: 0;
+				}
+				li{
+					display: block;
+				}
+			}
+		}
+	}
+	.hide{
+		display: none;
+	}
+}

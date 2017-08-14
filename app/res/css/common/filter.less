@@ -1,0 +1,151 @@
+@import "../../less/all.less";
+@haflchkColor:#58802a;
+.filter-choice{
+	position: relative;
+	color:#666;
+	overflow: visible;
+	line-height: 24px;
+	list-style-type: none;
+	margin:1em 0 0 0;
+	padding:5px 5px 0 20px;
+	.filter-title{
+		float:left;
+		min-width: 75px;
+		text-align: right;
+	}
+	div{
+		overflow: visible;
+		line-height: 26px;
+		font-family:FontAwesome;
+		.clearfix();
+		label{
+			margin:0 10px 0 1px;
+		}
+		input{
+			vertical-align: middle;
+			&.checkbox_true_part{
+				display: inline-block;
+				font-size: 14px;
+				&:before{
+					color:@haflchkColor;
+					content: '\f14a';
+				}
+			}
+		}
+	}
+
+	>div:last-child{
+		border-bottom: 1px dashed #ccc;
+	}
+
+	border-bottom: 1px solid #ccc;
+	.filter_info{
+		border-top: 1px dashed #ccc;
+		.clearfix();
+		>p{
+			float: left;
+		}
+		a{
+			display: inline-block;
+			border: 1px solid #ccc;
+			background: #eff2f4;
+			line-height: 22px;
+			padding: 0 13px;
+			color: #666;
+			.border-radius(2px);
+			float:right;
+			margin:10px;
+			&:hover{
+				background: #82bd3e;
+				color:white;
+			}
+		}
+	}
+
+}
+.btn-filter,.account-filter{
+	&.active{
+		background: white;
+		padding:0 5px 0 5px;
+		margin-top: -8px;
+		margin-bottom: -9px;
+		line-height: 41px;
+		border-top:#82bd3e 2px solid;
+		border-radius: 1px 1px 0 0;
+		border-left:#d6d6d6 1px solid;
+		border-right:#d6d6d6 1px solid;
+	}
+	i{
+		vertical-align: -3px;
+		display: inline-block;
+		width:14px;
+		height:14px;
+		background:url(/res/img/common/filter.png);
+	}
+}
+
+
+.os_filter{
+	position: relative;
+	&:hover{
+		.os_box{
+			display: block;
+			left: 0;
+		}
+	}
+}
+.os_box{
+	display: none;
+	position: absolute;
+	background-color: white;
+	border:1px solid #E5E5E5;
+	.border-radius(3px);
+	z-index: 2; // 防止操作系统的展开层被表格头部挡住
+	.box-shadow(1px 1px 20px rgba(180,180,180,0.8));
+	overflow: visible;
+	ul{
+		margin:0;
+		padding:0;
+		.reset-list-style();
+		max-width:300px;
+		.clearfix();
+		// padding: 12px 8px;
+		li{
+			box-sizing: border-box;
+			// float: left;
+			// display: inline-block;
+			text-align: left;
+			// &:nth-child(3n){
+			// 	text-align: right;
+			// }
+			// &:nth-child(3n+2){
+			// 	text-align: center;
+			// }
+			label{
+				display: block;
+				white-space: nowrap;
+				padding: 5px 10px 5px 10px;
+				margin: 0;
+			}
+		}
+	}
+	&:after{
+		content: '';
+		display: block;
+		height: 10px;
+		position: absolute;
+		top: -10px;
+		left: 0;
+		width: 100%;
+	}
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		.size(0);
+		border:6px solid transparent;
+		border-bottom-color: #fff;
+		left:50%;
+		top:-12px;
+	}
+}

@@ -1,0 +1,236 @@
+@import "../../less/all.less";
+
+html,body{
+	position:relative;
+	height:100%;
+	width:100%;
+}
+
+.popShodow() {
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.popup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1050;
+	overflow: auto;
+	background: rgba(0,0,0,0.5);
+	display: flex;
+	.popup-content{
+		margin: auto;
+		z-index: @modal-z-index + 2;
+		.popShodow();
+		position: relative;
+	}
+}
+
+.popup-content{
+	text-align: left;
+	background: white;
+	.popup-body{
+		overflow: hidden;
+	}
+	.popup-footer{
+		margin:5px;
+		.clearfix();
+		min-height: 40px;
+		font-size: 12px;
+		>a{
+			.border-radius(3px);
+			display: inline-block;
+			padding:5px 15px;
+			margin:4px;
+			float:right;
+		}
+		.popup-footer-confirm{
+			color:white;
+			background: #82bd3e;
+		}
+		.popup-footer-cancel{
+			color:#666;
+			background: #eff2f4;
+		}
+	}
+}
+
+.popup-header{
+	height: 40px;
+	min-width: 200px;
+	background: #f1f4f7;
+	line-height: 40px;
+	border-bottom: 1px solid #d6d6d6;
+	h5{
+		color: #666;
+		font-size: 14px;
+		padding: 0 0 0 15px;
+		margin: 0;
+	}
+	.popup-close{
+		float:right;
+		margin-right: 15px;
+		font-size: 14px;
+		color:#666;
+		cursor: pointer;
+	}
+}
+.popup-body{
+	height: calc(~"100% - 41px");
+	.common-content-wrap{
+		min-height: 0;
+	}
+	.common-content-main{
+		min-height: 0;
+	}
+	.popup_icon{
+		.size(52px);
+		float:left;
+		margin-right:1.8em;
+	}
+	.alert_container{
+		margin:1.8em;
+		color:#666;
+		font-size:12px;
+		.clearfix();
+		.alert_icon{
+			background: url(/res/img/common/attention.png) no-repeat;
+			&.success{
+				background: url(/res/img/common/success.png) no-repeat;
+			}
+		}
+		.alert_message{
+			float:left;
+		}
+	}
+	.confirm-tip{
+		.confirm_icon{
+			background: url(/res/img/common/confirm_icon.png) no-repeat;
+		}
+	}
+	.prompt_container{
+		margin:1.8em;
+		color:#666;
+		font-size:12px;
+		.clearfix();
+		.prompt_message{
+			float:left;
+		}
+		label{
+			display: block;
+			margin:6px 0;
+		}
+		input[type=text]{
+			border:1px solid #ccc;
+			.border-radius(3px);
+			line-height: 24px;
+			width:180px;
+		}
+		.skylar_logo{
+			.size(68px,68px);
+			background: url(/res/img/common/gold.png) no-repeat;
+		}
+	}
+
+}
+
+
+.popup-footer{
+	margin:5px;
+	.clearfix();
+	min-height: 40px;
+	position: relative;
+	font-size: 12px;
+	text-align: right;
+	>a,>button{
+		.border-radius(2px);
+		display: inline-block;
+		padding:5px 15px;
+		margin:4px;
+		line-height: inherit;
+	}
+	.popup-footer-confirm{
+		color:white;
+		background: #82bd3e;
+	}
+	.popup-footer-cancel{
+		color:#666;
+		background: #eff2f4;
+	}
+}
+
+.common-popup-main{
+	overflow: hidden;
+	background: white;
+	font-size: 12px;
+
+	.pager{
+		position: absolute;
+		bottom: 15px;
+		right:15px;
+		.total-record{
+			color:#666;
+		}
+		>a{
+			border:1px solid #ccc;
+			.border-radius(3px);
+			padding:5px 10px;
+			color:#333;
+			&.active{
+				border:0;
+				color:white;
+				background: #82bd3e;
+			}
+			&.next,&.prev{
+				background: #eff2f4;
+				&.active{
+					color:#333;
+				}
+			}
+		}
+		.pagination-num{
+			width:28px;
+			height:20px;
+			border:1px solid #ccc;
+			.border-radius(3px);
+		}
+	}
+	.common-content-table{
+	
+		// .common-table{
+		// 	width:100%;
+		// 	table-layout: fixed;
+		// 	text-align: left;
+		// 	font-weight: normal;
+		// 	color:#666;
+		// 	line-height: 32px;
+		// 	>thead{
+		// 		background: #f7f8fa;
+		// 		border-bottom: 1px solid #e5e5e5;
+		// 		th{
+		// 			text-align: left;
+		// 		}
+		// 	}
+		// 	>tbody tr{
+		// 		background: #ffffff;
+		// 		&:nth-child(odd){
+		// 			background: #f2f3f5;
+		// 		}
+		// 		&.table-allcheck-tip{
+		// 			background: #fbfde4;
+		// 			font-weight: bold;
+		// 			a{
+		// 				color:#cc6600;
+		// 			}
+		// 		}
+		// 	}
+		// 	th,td{
+		// 		.ellipsis();
+		// 		padding-left:8px;
+		// 	}
+		// }
+	}
+
+}

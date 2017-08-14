@@ -1,0 +1,276 @@
+.slider {
+  font-family: '微软雅黑', FontAwesome, 'Helvetica Neue', Arial, sans-serif;
+  position: relative;
+}
+
+.slider div,
+.slider span,
+.slider object,
+.slider iframe,
+.slider h1,
+.slider h2,
+.slider h3,
+.slider h4,
+.slider h5,
+.slider h6,
+.slider p,
+.slider pre,
+.slider a,
+.slider abbr,
+.slider acronym,
+.slider address,
+.slider code,
+.slider del,
+.slider dfn,
+.slider em,
+.slider img,
+.slider dl,
+.slider dt,
+.slider dd,
+.slider ol,
+.slider ul,
+.slider li,
+.slider fieldset,
+.slider form,
+.slider label,
+.slider legend,
+.slider caption,
+.slider tbody,
+.slider tfoot,
+.slider thead,
+.slider tr {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.slider table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+.slider caption,
+.slider th,
+.slider td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.slider a img {
+  border: none;
+}
+
+.slider .picWrap {
+  overflow: hidden;
+  position: absolute;
+  z-index: 9;
+  top: 22px;
+}
+
+.slider .picWrap ul {
+  list-style: none;
+  width: 2000px;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+}
+
+.slider .picWrap ul li {
+  float: left;
+  margin-right: 20px;
+  width: 80px;
+  height: 70px;
+  text-align: center;
+  *zoom: 1;
+}
+
+.slider .picWrap ul li:before,
+.slider .picWrap ul li:after {
+  display: table;
+  content: "";
+}
+
+.slider .picWrap ul li:after {
+  clear: both;
+}
+
+.slider .picWrap ul li span {
+  color: #666;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+
+.slider .picWrap ul li .funcicon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url("/res/img/login/useicon.png") no-repeat;
+}
+
+.slider .picWrap ul li .funcicon.exam {
+  background-position: 0 0;
+}
+
+.slider .picWrap ul li .funcicon.virus_scan {
+  background-position: -100px 0;
+}
+
+.slider .picWrap ul li .funcicon.leak_fix {
+  background-position: -200px 0;
+}
+
+.slider .picWrap ul li .funcicon.xp_fix {
+  background-position: -300px 0;
+}
+
+.slider .picWrap ul li .funcicon.pfs_tool {
+  background-position: 0 -100px;
+}
+
+.slider .picWrap ul li .funcicon.address_mgr {
+  background-position: -100px -100px;
+}
+
+.slider .picWrap ul li .funcicon.usb_mgr {
+  background-position: -200px -100px;
+}
+
+.slider .picWrap ul li .funcicon.notice {
+  background-position: -300px -100px;
+}
+
+.slider .picWrap ul li .funcicon.file {
+  background-position: 0 -200px;
+}
+
+.slider .picWrap ul li .funcicon.report {
+  background-position: -100px -200px;
+}
+
+.slider .picWrap ul li .funcicon.softwarebox {
+  background-position: -300px -200px;
+}
+
+.slider .slideBtn {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  margin: 0 10%;
+  margin-top: 22px;
+}
+
+.slider .slideBtn .fa {
+  font-size: 24px;
+}
+
+.slider .slideBtn span {
+  display: inline-block;
+  font-size: 48px;
+  color: #ccc;
+}
+
+.slider .slideBtn span.next {
+  float: right;
+}
+
+.slider .slideBtn span:hover {
+  color: #82bd3e;
+  border-color: #82bd3e;
+}
+
+.slider .switchRadio {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.usefun-setting {
+  list-style-type: none;
+  width: 460px;
+}
+
+.usefun-setting li {
+  float: left;
+  margin: 10px;
+  width: 90px;
+  height: 70px;
+  text-align: center;
+  *zoom: 1;
+}
+
+.usefun-setting li:before,
+.usefun-setting li:after {
+  display: table;
+  content: "";
+}
+
+.usefun-setting li:after {
+  clear: both;
+}
+
+.usefun-setting li label {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+}
+
+.usefun-setting li .funcicon {
+  margin: 0 auto;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("/res/img/login/useicon.png") no-repeat;
+}
+
+.usefun-setting li .funcicon.exam {
+  background-position: 0 0;
+}
+
+.usefun-setting li .funcicon.virus_scan {
+  background-position: -100px 0;
+}
+
+.usefun-setting li .funcicon.leak_fix {
+  background-position: -200px 0;
+}
+
+.usefun-setting li .funcicon.xp_fix {
+  background-position: -300px 0;
+}
+
+.usefun-setting li .funcicon.pfs_tool {
+  background-position: 0 -100px;
+}
+
+.usefun-setting li .funcicon.address_mgr {
+  background-position: -100px -100px;
+}
+
+.usefun-setting li .funcicon.usb_mgr {
+  background-position: -200px -100px;
+}
+
+.usefun-setting li .funcicon.notice {
+  background-position: -300px -100px;
+}
+
+.usefun-setting li .funcicon.file {
+  background-position: 0 -200px;
+}
+
+.usefun-setting li .funcicon.report {
+  background-position: -100px -200px;
+}
+
+.usefun-setting li .funcicon.softwarebox {
+  background-position: -300px -200px;
+}

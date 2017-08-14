@@ -1,0 +1,128 @@
+.common-content-table{
+    >.common-table{
+        width: 100%;
+        table-layout: fixed;
+        text-align: left;
+        font-weight: normal;
+        color:#666;
+        line-height: 38px;
+        >thead{
+            background: #f7f8fa;
+            border-bottom: 1px solid #e5e5e5;
+            th{
+                text-align: left;
+                color:#666;
+                font-weight: normal;
+            }
+            .sort-top,.sort-btm,.sort{
+                display: inline-block;
+                padding:0px 10px 0px 3px;
+            }
+            .sort-top i{
+                margin-left:5px;
+                background-image: url(/res/img/common/icon.png);
+                width:7px;
+                display: inline-block;
+                background-position:0 -87px;
+                height:4px;
+                vertical-align:2px;
+            }
+            .sort-btm i{
+                margin-left:5px;
+                background-image: url(/res/img/common/icon.png);
+                width:7px;
+                display: inline-block;
+                background-position:-7px -87px;
+                height:4px;
+                vertical-align:2px;
+            }
+            .sort i{
+                margin-left:5px;
+                background-image: url(/res/img/common/icon.png);
+                width:7px;
+                display: inline-block;
+                background-position:0 -78px;
+                height:9px;
+            }
+            .tabsort-header{
+                cursor: pointer;
+            }
+        }
+        >tbody tr{
+            background: #ffffff;
+            &.tra{
+                background: #f2f3f5;
+            }
+            input[type=checkbox]{
+                padding-right:4px;
+            }
+            &.table-allcheck-tip{
+                background: #fbfde4;
+                font-weight: bold;
+                a{
+                    color:#cc6600;
+                }
+            }
+            &.off-line{
+                color: #AAA;
+                .link{
+                    color: #AAA;
+                }
+            }
+        }
+        th,td{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding-left:15px;
+            &:before{
+                content:'';
+            }
+        }
+    }
+
+	.pager{
+		position: absolute;
+		bottom: 15px;
+		right:15px;
+		vertical-align: top;
+		.total-record{
+			color:#666;
+			display: inline-block;
+			height: 30px;
+			line-height: 30px;
+			vertical-align: top;
+		}
+		>a{
+			border:1px solid #ccc;
+            border-radius: 2px;
+			display: inline-block;
+			line-height: 28px;
+			height: 28px;
+			padding: 0 10px;
+			color: #666;
+			&.active{
+				border:0;
+				color:white;
+				background: #82bd3e;
+			}
+			&.next,&.prev{
+				background: #eff2f4;
+				&.active{
+					border:0;
+					color:#333;
+				}
+			}
+		}
+		.pagination-num{
+			width:20px;
+			height:28px;
+			padding:0 5px;
+			border:1px solid #ccc;
+			color:#666;
+			line-height: 28px;
+			vertical-align: top;
+            border-radius: 2px;
+		}
+	}
+}

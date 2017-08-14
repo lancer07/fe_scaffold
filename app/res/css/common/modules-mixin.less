@@ -1,0 +1,376 @@
+@import "./config.less";
+
+/** 分组策略和首页的终端模块定制  */
+.module-icon-mixin(){
+    .module-icon {
+        width: 50px;
+        height: 50px;
+        background: url("/res/img/tools/modules.png") 0 0 no-repeat;
+        display: block;
+        &.icon1{
+            background-position: 0 0;
+        }
+        &._360av{
+            background-position: -50px 0;
+        }
+        &.icon3{
+            background-position: -100px 0;
+        }
+        &._360nac{
+            background-position: -150px 0;
+        }
+        &.icon5{
+            background-position: 0 -50px;
+        }
+        &.cleaner{
+            background-position: -50px -50px;
+        }
+        &.speedup{
+            background-position: -100px -50px;
+        }
+        &.speedball{
+            background-position: -150px -50px;
+        }
+        &.leakfix{
+            background-position: 0 -100px;
+        }
+        &.xpfix{
+            background-position: -50px -100px;
+        }
+        &.esmc_base{
+            background-position: -100px -100px;
+        }
+        &.icon12{
+            background-position: -150px -100px;
+        }
+        &.esmc_usb{
+            background-position: 0px -150px;
+        }
+        &.engine_bd{
+            background-position: -50px -150px;
+        }
+        &.remotecontrol{
+            background-position: -100px -150px;
+        }
+        &.icon16{
+            background-position: -150px -150px;
+        }
+        &.netmonitor{
+            background-position: 0px -200px;
+        }
+        &.netfind{
+            background-position: -50px -200px;
+        }
+        &.engine_qvm{
+            background-position: -150px -200px;
+        }
+        &.advtools{
+            cursor: pointer;
+            background-position: -100px -200px;
+        }
+        &.softmgr{
+            cursor: pointer;
+            background-position: -100px -350px;
+        }
+        &.audit{
+            cursor: pointer;
+            background-position: -50px -350px;
+        }
+        &.engine_avira{
+            cursor: pointer;
+            background-position: -50px -400px;
+        }
+        &.safe_check{
+            cursor: pointer;
+            background-position: -100px -400px;
+        }
+        &.valuecheck{
+            cursor: pointer;
+            background-position: 0 -350px;
+        }
+        &.protectcheck{
+            cursor: pointer;
+            background-position: -150px -300px;
+        }
+        &.logcheck{
+            cursor: pointer;
+            background-position: -100px -300px;
+        }
+        &.sslvpn{
+            cursor: pointer;
+            background-position: -150px -400px;
+        }
+        
+        &.tommc{
+            background-position: -100px -100px;
+        }
+        &.hassets{
+            background-position: -50px -450px;
+        }
+        &.softwaredis{
+            background-position: 0px -450px;
+        }
+        &.policecloud {
+            background-position: 0 -250px;
+        }
+        &.appctl{
+           background-position: 0 -500px;           
+        }
+    }
+}
+
+/** 首页授权详情  */
+.cert-module-icon-mixin(){
+    .module-icon{
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        background-image: url("/res/img/tools/modules.png");
+        background-repeat: no-repeat;
+        &[status='-1'],&[status='0']{
+            background-image: url("/res/img/tools/modules_gray.png");
+        }
+        &.com_360base{
+            background-position: 0 0;
+        }
+        &.icon3{
+            background-position: -100px 0;
+        }
+        &.com_360nac{
+            background-position: -150px 0;
+        }
+        &.com_xpfix{
+            background-position: -50px -100px;
+        }
+        &.com_tommc{
+            background-position: -100px 0;
+        }
+        &.icon12{
+            background-position: -150px -100px;
+        }
+        &.com_esmc_usb{
+            background-position: 0px -150px;
+        }
+        &.com_engine_bd,
+        &.com_ext_engine_bd,
+        &.com_winser_ext_engine_bd{
+            background-position: -50px -150px;
+        }
+        &.com_vm,&.com_vm_vm,&.vm{
+            background-position: 0 -300px;
+        }
+        &.com_linux_server{
+            background-position: -150px -250px;
+        }
+        &.com_linux{
+            background-position: -50px -300px;
+        }
+        &.com_360av,
+        &.com_linux_360av,
+        &.com_linuxser_360av,
+        &.com_winser_360av,
+        &.com_mac_360av{
+            background-position: -50px 0;
+        }
+        &.com_360av_update,
+        &.com_linux_360av_update,
+        &.com_linuxser_360av_update,
+        &.com_winser_360av_update,
+        &.com_mac_360av_update{
+            background-position: 0 -400px;
+        }
+        &.com_leakfix,
+        &.com_winser_leakfix{
+            background-position: 0 -100px;
+        }
+        &.com_leakfix_update,
+        &.com_winser_leakfix_update{
+            background-position: -150px -350px;
+        }
+        &.com_engine_bd{
+            background-position: -50px -150px;
+        }
+        &.com_valuecheck{
+            background-position: 0px -350px;
+        }
+        &.com_protectcheck{
+            background-position: -150px -300px;
+        }
+        &.com_logcheck{
+            background-position: -100px -300px;
+        }
+        &.com_terminal{
+            background-position: -50px -350px;
+        }
+        &.com_ent_softmgr{
+            background-position: -100px -350px;
+        }
+        &.com_policecloud{
+            background-position: 0 -250px;
+        }
+        &.com_sslvpn{
+            background-position: -150px -400px;
+        }
+        &.health_online{
+            background-position: -150px -450px;
+        }
+        &.com_tommc{
+        background-position: -100px 0;
+        }
+        &.com_hassets{
+            background-position: -50px -450px;
+        }
+        &.com_softwaredis{
+            background-position: 0 -450px;
+        }
+        &.com_safe_check{
+            background-position: -100px -400px; 
+        }
+        &.com_c_bcm_nacplugin{
+            background-position: -100px -450px;     
+        }
+        &.com_ext_engine_avira,
+        &.com_winser_ext_engine_avira{
+            background-position: -50px -400px;          
+        }
+        &.com_coremail{
+            background-position: 0 -500px;          
+        }
+        &.com_appcontrol,
+        &.com_linuxser_appcontrol,
+        &.com_winser_appcontrol {
+           background-position: 0 -500px;           
+        }
+    }
+}
+
+.func-icon-mixin() {
+    .func-icon {
+        width: 52px;
+        height: 52px;
+        float: left;
+        margin-right: 5px;
+        background: url("/res/img/tools/func_icons_sprite.png") no-repeat;
+        &._360USBRescue{
+            background-position: -260px -104px;
+        }
+        &._360ask{
+            background-position: -156px -260px;
+        }
+        &._360HealthElf{
+            background-position: 0px -312px;
+        }
+        &._360MobileAssistant{
+            background-position: -208px -260px;
+        }
+        &._360PrivacyGuard{
+            background-position: 0px 0px;
+        }
+        &._360Compress{
+            background-position: -260px -260px;
+        }
+        &._360WifiExamine{
+            background-position: 0px -104px;
+        }
+        &._360cloud{
+            background-position: -52px -260px;
+        }
+        &.SoftMove{
+            background-position: -104px -260px;
+        }
+        &._360UDiskCheck{
+            background-position: -156px -312px;
+        }
+        &._360Wipe{
+            background-position: -52px -208px;
+        }
+        &.WangSuCeShiQi{
+            background-position: -260px -52px;
+        }
+        &._360DnsOpt{
+            background-position: -156px -104px;
+        }
+        &._360LuDaShi{
+            background-position: -52px -156px;
+        }
+        &.DefaultSoftSetting{
+            background-position: -104px -156px;
+        }
+        &._360Drvmgr{
+            background-position: -208px -104px;
+        }
+        &.JingChengGuangLi{
+            background-position: -0px -156px;
+        }
+        &._360SysClean{
+            background-position: -260px -156px;
+        }
+        &._360SysReset{
+            background-position: -156px -208px;
+        }
+        &._360Recovery{
+            background-position: -260px -208px;
+        }
+        &._360Calendar{
+            background-position: -52px -312px;
+        }
+        &.InstallOneKey{
+            background-position: -104px -208px;
+        }
+        &._360RegClean{
+            background-position: -208px -156px;
+        }
+        &._360LWiFi{
+            background-position: -208px -52px;
+        }
+        &.softmgr{
+            background-position: -52px -0px;
+        }
+        &._360jishi{
+            // background-position: -104px -0px;这个是旧的
+            background-position:-208px -312px;
+        }
+        &.mobile{
+            background-position: -156px -0px;
+        }
+        &.PopWndTracker{
+            background-position: -208px -0px;
+        }
+        &.sandbox{
+            background-position: -260px -0px;
+        }
+        &.softlite{
+            background-position: -52px -52px;
+        }
+        &._360MainPageRepair{
+            background-position: -0 -52px;
+        }
+        &.RouterAssistant{
+            background-position: -104px -52px;
+        }
+        &._360NetRepair{
+            background-position: -156px -52px;
+        }
+        &.LiuLiangJianKong{
+            background-position: -52px -104px;
+        }
+        &.LSPXiuFu{
+            background-position: -104px -104px;
+        }
+        &.LargeFileMgr{
+            background-position: -156px -156px;
+        }
+        &._360XiTongJiJiuXiang{
+            background-position: -0px -208px;
+        }
+        &._360Root{
+            background-position: -208px -208px;
+        }
+        &._360searchdesktop{
+            background-position: -0px -260px;
+        }
+        &.WenJianFenSuiJi{
+            background-position: -104px -312px;
+        }
+    }
+}

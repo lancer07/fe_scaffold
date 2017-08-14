@@ -1,0 +1,331 @@
+@import "variable.less";
+@import "./search.less";
+
+.skylar-toolbar{
+    height: @skylar_toolbar_height;
+    background: #FFF;
+    position: relative;
+    border-bottom: solid 1px #e3e3e3;
+    // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    .tools-left,
+    .tools-right{
+        height: 100%;
+        color: #fff;
+        font-size: 0px;
+        position: relative;
+        display: inline-block;
+        line-height: @skylar_toolbar_height;
+        a{
+            color: #fff;
+        }
+        span{
+            margin: 0 4px;
+        }
+        .divider{
+            display: inline-block;
+            width: 0;
+            height: 16px;
+            border-right: solid 1px #E3E3E3;
+            vertical-align: middle;
+            // margin: 0 20px;
+        }
+        .function-icon{
+            // width: @skylar_toolbar_height;
+            height: @skylar_toolbar_height;
+            line-height: @skylar_toolbar_height;
+            padding: 0 20px;
+            display: inline-block;
+            position: relative;
+            box-sizing: border-box;
+            text-align: center;
+            overflow: visible;
+            vertical-align: middle;
+            font-size: 12px;
+            a{
+                color: #5691d3;
+            }
+            >i{
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                background-position: center;
+                background-repeat: no-repeat;
+                vertical-align: middle;
+            }
+            .fa{
+                color: #DDD;
+                margin: 0;
+                font-size: @skylar_toolbar_icon_size;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .function-content{
+                color: #666;
+                display: none;
+                position: absolute;
+                top: @skylar_toolbar_height / 2 + @skylar_search_height / 2;
+                background: #FFF;
+                line-height: 30px;
+                border-radius: 2px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+                z-index: 99;
+                .function-opt{
+                    cursor: pointer;
+                    padding: 0 1em;
+                    margin: 0;
+                    text-align: left;
+                    border-bottom: solid 1px #CCC;
+                    &:hover{
+                        background: #82BD3E;
+                        color: #FFF;
+                        a {
+                            color: #FFF;
+                        }
+                    }
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+            &:hover{
+                background: #FFF;
+                .fa{
+                    color: #999;
+                }
+                .function-content{
+                    display: block;
+                }
+            }
+        }
+
+        // .au-info{
+        //     position: relative;
+        //     color: #999;
+        //     height: 24px;
+        //     line-height: 24px;
+        //     padding:8px 0;
+        //     vertical-align: top;
+        //     a{
+        //         vertical-align: top;
+        //     }
+        //     &:hover{
+        //         .ver_dropMenu{
+        //             display: block;
+        //         }
+        //         .fa-caret-down{
+        //             transition:all 0.5s ease;
+        //             transform-origin:center;
+        //             transform:rotate(180deg)
+        //         }
+        //     }
+        //     .fa-caret-down{
+        //         display: inline-block;
+        //         position: relative;
+        //         padding:0 8px;
+        //         font-size: 14px;
+        //         margin:0;
+        //         color: #fff;
+        //     }
+        //     .au-state{
+        //         //display: none;
+        //         display: inline-block;
+        //         margin: 0 0 0 0.5em;
+        //         height: 24px;
+        //         line-height: 24px;
+        //         vertical-align: top;
+        //     }
+        //     .au-state.trial{
+        //         width: 85px;
+        //         background: @sq no-repeat 0 0;
+        //     }
+        //     .au-state.official{
+        //         width: 85px;
+        //         background: @sq no-repeat 0 -27px;
+        //     }
+        //     .au-state.unauthorized{
+        //         width: 95px;
+        //         background: @sq no-repeat 0 -54px;
+        //     }
+        // }
+    }
+
+    .tools-left{
+        .function-content{
+            left: 0;
+            border-top-left-radius: 0px;
+        }
+    }
+
+    .tools-right{
+        text-align: right;
+        float: right;
+        .function-content{
+            right: 20px;
+        }
+    }
+
+    .message-count{
+        position: absolute;
+        top: 16px;
+        right: 10px;
+        font-size: 12px;
+        width: 1.6em;
+        height: 1.6em;
+        background: #FB3E42;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 1.6em;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    // 版本信息
+    .function-icon.version{
+        .function-icon-version{
+            background-image: url(/res/img/common/version.png);
+        }
+        .function-version{
+            white-space: nowrap;
+            >span{
+                display: block;
+                color: #666;
+            }
+        }
+        .ver_span{
+            position: relative;
+            cursor: pointer;
+            .new_ver{
+                display: none;
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                right: -1px;
+                top: -1px;
+                background: url(/res/img/common/red.png) no-repeat;
+            }
+            .arrow-up_loading,.arrow-up_loading_gray{
+                display: none;
+                background: url(/res/img/common/arrow-up_loading.gif) no-repeat;
+                width: 16px;
+                height: 16px;
+                &.arrow-up_loading_gray{
+                    background: url(/res/img/common/arrow-up_loading_gray.gif) no-repeat;
+                }
+            }
+        }
+    }
+
+    // 搜索框
+    #searchContainer{
+        display: inline-block;
+        .skylar-search();
+    }
+
+    // 授权信息
+    .function-icon.cert{
+        .function-icon-cert{
+            background-image: url(/res/img/common/cert.png);
+        }
+    }
+
+    // 消息通知
+    .function-icon.message{
+        .function-icon-message{
+            background-image: url(/res/img/common/notification.png);
+        }
+    }
+    .function-message{
+        .list-outter{
+            overflow-y: auto;
+            max-height: 300px;
+            width: 350px;
+        }
+        #messageList{
+            max-height: 310px;
+        }
+        #noMessage{
+            white-space: nowrap;
+            padding: 3px 1em;
+            border-bottom: none;
+        }
+        .message{
+            overflow: hidden;
+            position: relative;
+            padding: 3px 2.5em 3px 1em;
+            border-bottom: solid 1px #CCC;
+            &:last-child{
+                border-bottom: 0;
+            }
+            i.fa {
+                top: 5px;
+                right: 7px;
+                color: #999;
+                cursor: pointer;
+                position: absolute;
+                &:hover{
+                    color: #666;
+                }
+            }
+            p{
+                text-align: left;
+                margin: 0 7em 0 0;
+                line-height: 1.5;
+                word-break: break-all;
+            }
+            .time-stamp{
+                margin: 0;
+                line-height: 1.5;
+                float: right;
+                color: #999;
+            }
+        }
+        .clear-wrapper{
+            border-top: solid 1px #CCC;
+        }
+    }
+
+
+    // 当前用户
+    .function-icon.user{
+        .user-name{
+            color: #8D959A;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+        .function-icon-user{
+            background-image: url(/res/img/common/user.png);
+        }
+        .function-icon-dropdown{
+            background-image: url(/res/img/common/dropdown.png);
+        }
+        #userManagement{
+            p{
+                white-space: nowrap;
+                margin: 0;
+            }
+        }
+    }
+
+    // 任务管理按钮
+    #taskManagement{
+        cursor: pointer;
+        .function-icon-tasks{
+            background-image: url(/res/img/common/tasks.png);
+        }
+    }
+
+    .au-icon-container{
+        display:block;
+        float: left;
+        width: 198px;
+        height: 56px;
+        margin: 10px 0 0 10px;
+        overflow:hidden;
+        .au-icon{
+            display:inline-block;
+
+            line-height: 56px;
+        }
+    }
+}

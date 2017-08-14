@@ -1,0 +1,12 @@
+{
+  "presets": ["stage-0","es2015","react"],
+  "plugins": ["syntax-jsx", "transform-class-properties", "transform-object-assign"],
+  "env": {
+    "vue_dev": {
+       "plugins": ["transform-vue-jsx"]
+    },
+    "vue_prod": {
+       "plugins": ["transform-vue-jsx"]
+    }
+  }
+}

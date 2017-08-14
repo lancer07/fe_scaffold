@@ -1,0 +1,43 @@
+/* 左侧列表，右侧内容的布局 */
+.policy-tpl {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    
+
+    .left {
+        flex: 0 0 180px;
+        height: 100%;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .right {
+        flex: 1 0 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        min-width: 920px;
+        height: 100%;
+        margin-right: 0px;
+    }
+
+    .right-content {
+        height: 100%;
+        display: flex;
+        flex: 1 0 0;
+        overflow-y: auto;
+    }
+
+    .button-group {
+        height: 45px;
+        line-height: 45px;
+        padding-right: 9px;
+        align-self: flex-end;
+    }
+
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+}

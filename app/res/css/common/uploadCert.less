@@ -1,0 +1,121 @@
+@import "../../less/all.less";
+html,body{
+	height:100%;
+	background:#e5e8eb;
+	min-height: 700px;
+	color: #666;
+	margin:0;
+	padding:0;
+}
+@login_bgUrl:url(/res/img/login/login_bg.jpg);
+@sysIconUrl:url(/res/img/common/index_sprite.png);
+
+.hwrap{
+	overflow: hidden;
+	background:#061b34 @login_bgUrl top center no-repeat;
+	border-bottom: #82bd3e solid 2px;
+	>.header{
+		width:1000px;
+		margin:0 auto;
+		height:348px;
+		overflow: hidden;
+		>.systemIcon{
+			margin: 14px 0 0 0;
+			display: inline-block;
+			
+		}
+		>.right-tip{
+			.opacity(40);
+			margin-top:5px;
+			text-align: right;
+			float:right;
+			color:#fff;
+			font-size: 12px;
+			line-height: 12px;
+			span{
+				margin:0 4px;
+				float: right;
+			}
+			a{
+				color:#fff;
+				float: right;
+			}
+			p{ 
+				clear:both; 
+				padding:5px; 
+				line-height:12px;
+			}
+		}
+	}
+}
+.bwrap{
+	font-size: 12px;
+	text-align: center;
+	color: #333;
+	.trial_auth{
+		padding:0 .5em;
+		text-decoration: none;
+		color:#2196F3;
+	}
+	.au-uploader{
+		.inline-block();
+		font-size: 12px;
+		text-align: left;
+		.upfile-error{
+			color: red;
+			display: none;
+		}
+		.au-notice{
+			line-height: 30px;
+			color: #999;
+			span{
+				color: red;
+			}
+		}
+		.upfile-info{
+			font-weight: bold;
+			line-height: 2;
+		}
+		.upfile-states{
+			color:red;
+			line-height: 2;
+			div{
+				display: none;
+			}
+		}
+		>button{
+			display: none;
+		}
+		.link{
+			color:#00b7ee;
+		}
+		#picker-file{
+			height:22px;
+		}
+		#picker{
+			display: inline-block;
+			.webuploader-pick{
+				background: #eff2f4;
+				color:#666;
+				height:27px;
+				border:1px solid #ccc;
+				line-height: 27px;
+				vertical-align: middle;
+				padding: 0px 15px;
+			}
+		}
+	}
+}
+
+
+
+
+
+.common-footer { clear:both;}
+.common-footer .copyright{
+	width:100%;
+	text-align: center;
+}
+
+.dividingline_grey{ width:1px; background:#cccccc; display:block; height:8px; margin:5px; float:left;}
+.dividingline_grey2{ width:1px; background:#4f5b6b; display:block; height:8px; margin:1px 8px; float:right;}
