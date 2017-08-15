@@ -14,7 +14,7 @@ fis.match('*', {
 //   optimizer: fis.plugin('uglify-js')
 // });
 
-fis.match('components/*.less', {
+fis.match('{components,pages}/*.less', {
   parser: fis.plugin('less'),
   rExt: '.css'
 });
@@ -45,5 +45,9 @@ fis.set('project.ignore', [
   'res/vendor/**',
   'res/build/**',
   'res/vue/**',
-  '.git/**'
+  'tests/**',
+  '.git/**',
+  'webpack.vue.base.config.js',
+  'fis-conf.js',
+  'package.json'
 ]);
