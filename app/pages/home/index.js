@@ -1,6 +1,5 @@
 define([
-    'res/js/common/template',
-	'res/js/common/jquery-tools'
+    'res/js/common/template'
 ],
 function(template){
 	$(document.body).delegates({
