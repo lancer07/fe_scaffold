@@ -1,6 +1,7 @@
 @import "../../../res/css/common/common.less";
 @import "../../../res/css/common/popup.less";
 @import "../../../res/css/common/table_old.less";
+@import "../../../res/css/common/tab.less";
 body{
     padding:0 20px;
     dl{
@@ -19,8 +20,26 @@ body{
         }
     }
     .common-content-main{
-        width:90%;
+        width:80%;
         position: relative;
+    }
+    .report-content{
+        width:80%;
+        background:#fff;
+        .tabswitch{
+            li{
+                padding:5px 20px;
+                &.active{
+                    color:#fff;
+                    background:#d6d6d6
+                }
+            }
+        }
+        .dataTab{
+            min-height:300px;
+            text-align: left;
+            padding:10px;
+        }
     }
     .popup-main{
         padding:20px;

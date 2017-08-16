@@ -1,14 +1,16 @@
 define([
     'res/js/common/template',
+    'res/js/common/tab',
     'res/js/common/table',
     'res/js/common/popup',
     'res/js/common/jquery-tools'
 ],
-function(template){
+function(template,tab){
     var table = $.table(".common-content-main", true);
+    tab.init($(".report-content"), null, false);
 
     function changePassword(){
-
+        alert(1)
     }
 
 
