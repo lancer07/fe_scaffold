@@ -204,7 +204,7 @@ define('res/js/common/popup', ['res/js/common/jquery-tools'], function() {
 				width: (width - 50)
 			});
 		} else {
-			var topValue = Math.max(document.body.scrollTop, document.documentElement.scrollTop, 105);
+			var topValue = Math.max(document.body.scrollTop, document.documentElement.scrollTop, 0);
 			$('#tips').css('top', topValue);
 		}
 		clearTimeout(tipsTimer);

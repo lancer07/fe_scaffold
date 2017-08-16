@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="/pages/include/html_head.tpl?__inline" rel="import" />
+<link href="/pages/demos/ui/index.css" rel="stylesheet" />
+<body>
+
+    <dl>
+        <dt>popup.js</dt>
+        <dd>
+            <h2>Tips</h2>
+            <button class="button" id="successTipsHandle">success tips</button>
+            <button class="button" id="errorTipsHandle">error tips</button>
+            <h2>Popup</h2>
+            <button class="button" id="alertHandle">alert</button>
+            <button class="button" id="comfirmHandle">comfirm</button>
+            <button class="button" id="promptHandle">prompt</button>
+            <button class="button" id="normalPopupHandle">自定义</button>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt>table.js , pager.js</dt>
+        <dd>
+            <div class="common-content-main" data-pars="limit=10">
+                <div class="common-content-table" data-url="/data/list.json" data-tpl="data-table">
+                    <table class="table"></table>
+                </div>
+                <div class="pager-placeholder"></div>
+                <nav class="pager"></nav>
+            </div>
+        </dd>
+    </dl>
+
+    <!-- 修改密码弹框 -->
+    <script type="text/html" id="tplPassword">
+        <div class="popup-main">
+            <div class="item">
+                <input type="password" placeholder="请输入密码"/>
+            </div>
+            <div class="item">
+                <input type="password" placeholder="确认密码"/>
+            </div>
+        </div>
+    </script>
+
+    <!-- 表格骨架 -->
+    <script type="text/html" id="data-table">
+        <table class="common-table" data-tpl="data-table-content">
+          <thead>
+            <tr>
+              <th class="tabsort-header" data-sort="display_name"><input type="checkbox" id="selectAllPage"><span class="sort">计算机名</span></th>
+              <th class="tabsort-header" data-sort="ip"><span class="sort">IP地址</span></th>
+              <th class="tabsort-header" data-sort="gid"><span class="sort">所在分组</span></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+    </script>
+    <script type="text/html" id="data-table-content">
+    {for(var i=0;i<opts.list.length;i++)}
+    {js var item=opts.list[i]}
+    {js var cls="";if(i%2==1)cls+= " tra";}
+    <tr class="{cls} {if(item.is_online==false)}off-line{/if}" data-id="{item.id}">
+        <td title=""><input type="checkbox" data-id="{item.id}"><span class="security-name">{item.id}</span></td>
+        <td title="{item.ip}">{item.ip}</td>
+        <td title="{item.gname}">{item.gname}</td>
+    </tr>
+    {/for}
+    </script>
+
+
+    <script>
+        require(['pages/demos/ui/index']);
+    </script>
+</body>
+</html>

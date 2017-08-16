@@ -4,7 +4,6 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fe_scaffold</title>
-    <link rel="stylesheet" href="/res/vendor/bootstrap/css/bootstrap.min.css" />
     <script src="/res/vendor/jquery/jquery-1.11.1.min.js"></script>
     <script src="/res/vendor/requirejs/requirejs.js"></script>
     <script>
