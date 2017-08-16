@@ -1,7 +1,7 @@
 define('res/js/common/task', [
 	'res/js/common/jquery-tools',
 	'res/js/common/table',
-	'module/jquery-ui/jquery-ui'
+	'vendor/jquery-ui/jquery-ui'
 ], function() {
 	var LIMIT = 7;
 	var objHash = {};

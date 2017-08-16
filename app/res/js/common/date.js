@@ -1,4 +1,4 @@
-define('res/js/common/date',['module/My97DatePicker/WdatePicker'],function(){
+define('res/js/common/date',['vendor/My97DatePicker/WdatePicker'],function(){
 	var date = {
 		init:function(){
 			$(document).on('click','.Wdate',function(){

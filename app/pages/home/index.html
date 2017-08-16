@@ -3,9 +3,6 @@
 <link href="/pages/include/html_head.tpl?__inline" rel="import" />
 <link rel="stylesheet" href="./index.css" />
 <body>
-
-    <link href="/components/nav/index.tpl?__inline" rel="import">
-
     <h1>脚手架使用概要 （基于fis3的前端工程构建）</h1>
 
     <h3>1. “?__inline” 语法 作为组件化基础</h3>
@@ -14,7 +11,7 @@
     </pre>
     <h3>
         2. Require JS
-        <a href="/pages/home/index.js" target="_blank">例子</a>
+        <a href="/pages/home/index.js" target="_blank"> &gt;&gt;例子</a>
     </h3>
     <pre>
         <code>//一个页面，require一个JS页面逻辑处理文件</code>
@@ -22,8 +19,13 @@
             <code> require(['pages/home/index']);</code>
         &lt;/script></code>
     </pre>
-   
-    <h3>3. 模版引擎 </h3>
+    
+    <h3>3.基于RequireJS的基础组件</h3>
+    <pre>
+        <code>目录 res/js/common</code>
+    </pre>
+
+    <h3>4. 模版引擎 </h3>
     <pre>
         <code>var res = {
             name : 'lancer'
@@ -75,7 +77,7 @@
         </div>
     </script>
 
-    <h3>4.Vue的目录结构 <a href="/pages/about/" target="_blank">例子</a></h3>
+    <h3>5.Vue的目录结构 <a href="/pages/about/" target="_blank"> &gt;&gt;例子</a></h3>
     <pre>
         <code>// 先建一个html的page，id选择器，引入build后的js文件</code>
         <code>&lt;div id="about"></div></code>
@@ -85,13 +87,18 @@
         <code>// vue的主文件在 /res/vue/pages/about/tpl/About.vue</code>
     </pre>
 
-    <h3>5. Less</h3>
+    <h3>6. Less</h3>
     <pre>
         <code>工具类存放在 /res/less</code>
         <code>less文件保存后，会自动在同级生成对应css文件</code>
     </pre>
+    
+    <h3>7. Mocha单元测试 <a href="/tests/" target="_blank"> &gt;&gt;查看测试报告</a></h3>
+    <pre>
+        <code>基于Mocha的expect断言测试</code>
+    </pre>
 
-    <h3>6. 建立开发环境与发布 <a href="/package.json" target="_blank">package.json</a></h3>
+    <h3>8. 建立开发环境与发布 <a href="/package.json" target="_blank"> &gt;&gt;package.json</a></h3>
     <pre>
         <code>"build:vue": "npm run build:vue:dll && npm run build:base:vue -- --prod",</code>
         <code>"dev:vue": "npm run build:base:vue -- --dev --watch",</code>

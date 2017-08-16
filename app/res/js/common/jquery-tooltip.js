@@ -1,4 +1,4 @@
-define(['module/jquery-ui/jquery-ui'], function(){
+define(['vendor/jquery-ui/jquery-ui'], function(){
     //启用Jquery UI 的tool-tips
 	var escapeDOM = document.createElement("textarea");
 

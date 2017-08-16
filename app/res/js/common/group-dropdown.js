@@ -1,4 +1,4 @@
-define('res/js/common/group-dropdown', ['module/jquery.zTree/js/jquery.ztree.all-3.5', 'res/js/common/jquery-tools'], function(tree){
+define('res/js/common/group-dropdown', ['vendor/jquery.zTree/js/jquery.ztree.all-3.5', 'res/js/common/jquery-tools'], function(tree){
 	(function($){
 		var obj = {};
 		$.fn.groupDropdown = function(multiSelect,autoScroll){

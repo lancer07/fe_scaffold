@@ -1,5 +1,4 @@
 describe('树组件测试', function () {
-	var injector;
 	// 执行第一个测试用例之前调用
 	before(function () {
 

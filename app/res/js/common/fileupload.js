@@ -1,4 +1,4 @@
-define('res/js/common/fileupload',['res/js/common/jquery-tools','module/webuploader/webuploader'],function(){
+define('res/js/common/fileupload',['res/js/common/jquery-tools','vendor/webuploader/webuploader'],function(){
 
 
     var FileUpload = {
