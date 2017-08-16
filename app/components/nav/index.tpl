@@ -1,10 +1,11 @@
 <link rel="stylesheet" href="./index.css?__inline" />
-<nav>
-    <ul class="navbar nav-pills">
-        <li role="presentation"><a href="javascript:;">nav1</a></li>
-        <li role="presentation"><a href="javascript:;">nav2</a></li>
-        <li role="presentation"><a href="javascript:;">nav3</a></li>
-        <li role="presentation"><a href="javascript:;">nav4</a></li>
+<nav class="top-nav">
+    <ul>
+        <li><a href="/pages/home">概要</a></li>
+        <li><a href="/pages/demos/ui/">基础组件</a></li>
+        <li><a href="/pages/about/">Vue</a></li>
+        <li><a href="/tests/" target="_blank">Mocha测试报告</a></li>
+        <li><a href="http://fis.baidu.com" target="_blank">Fis官网</a></li>
     </ul>
     <div class="clearfix"></div>
 </nav>

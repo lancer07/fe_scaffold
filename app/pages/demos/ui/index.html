@@ -3,7 +3,7 @@
 <link href="/pages/include/html_head.tpl?__inline" rel="import" />
 <link href="/pages/demos/ui/index.css" rel="stylesheet" />
 <body>
-
+    <link href="/components/nav/index.tpl?__inline" rel="import" />
     <dl>
         <dt>popup.js</dt>
         <dd>
@@ -22,7 +22,7 @@
         <dt>table.js , pager.js</dt>
         <dd>
             <div class="common-content-main" data-pars="limit=10">
-                <div class="common-content-table" data-url="/data/list.json" data-tpl="data-table">
+                <div class="common-content-table" data-url="/api/user" data-tpl="data-table">
                     <table class="table"></table>
                 </div>
                 <div class="pager-placeholder"></div>

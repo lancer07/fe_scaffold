@@ -1,17 +1,35 @@
-nav {
+nav.top-nav {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
   color: red;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  font-size: 18px;
+  z-index: 100;
 }
-nav ul.navbar li {
+nav.top-nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav.top-nav ul li {
+  float: left;
+  width: 20%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
   list-style: none;
 }
-nav ul.navbar li a {
-  padding: 10px;
-}
-nav ul.navbar li a:hover,
-nav ul.navbar li a:active {
+nav.top-nav ul li a {
+  display: block;
+  color: #fff;
   text-decoration: none;
-  border-bottom: 0;
 }
-nav .clearfix {
+nav.top-nav ul li a:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+nav.top-nav .clearfix {
   clear: both;
 }
