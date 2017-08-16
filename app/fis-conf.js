@@ -45,7 +45,7 @@ fis.set('project.ignore', [
   'res/vendor/**',
   'res/build/**',
   'res/vue/**',
-  'tests/**',
+  //'tests/**',
   '.git/**',
   'webpack.vue.base.config.js',
   'fis-conf.js',

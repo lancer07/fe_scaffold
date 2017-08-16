@@ -1,11 +1,17 @@
 define([
     'res/js/common/template',
     'res/js/common/table',
-	'res/js/common/popup'
+    'res/js/common/popup',
+    'res/js/common/jquery-tools'
 ],
 function(template){
     var table = $.table(".common-content-main", true);
-    
+
+    function changePassword(){
+
+    }
+
+
 	$(document.body).delegates({
         '#successTipsHandle' : function(){
             $.tips('i am ok',true);
@@ -36,6 +42,7 @@ function(template){
                 confirm:{
                     text:'确认',
                     callback:function(self){
+                        changePassword();
                         self.close();
                     }
                 },
@@ -50,5 +57,10 @@ function(template){
         }
 	}).ready(function(){
         
-	});
+    });
+    
+    return {
+        changePassword : changePassword
+    }
+
 });
