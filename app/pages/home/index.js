@@ -28,6 +28,10 @@ function(template){
                 ]
             });
             $("#message").html(tplAutoApproval);
+        },
+        '#logout' : function(){
+            location.href = "/pages/login";
+            sessionStorage.setItem("login", false); 
         }
 	}).ready(function(){
         

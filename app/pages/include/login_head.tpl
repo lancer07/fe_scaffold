@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fe_scaffold</title>
+    <title>login</title>
     <script src="/res/vendor/jquery/jquery-1.11.1.min.js"></script>
     <script src="/res/vendor/requirejs/requirejs.js"></script>
     <script>
