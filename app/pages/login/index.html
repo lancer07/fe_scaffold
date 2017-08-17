@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="/pages/include/html_head.tpl?__inline" rel="import" />
+    <link rel="stylesheet" href="./index.css" />
+    <body>
+        <div class="main">
+            <div class="login-box">
+                <h1>用户登录</h1>
+                <div class="item">
+                    <input type="text" class="txt" verify="required" verify-label="用户名"  placeholder="用户名" id="username"/>
+                </div>
+                <div class="item">
+                    <input type="password" class="txt"  verify="required" verify-label="密码" placeholder="密码" id="userpsw"/>
+                </div>
+                <div class="item">
+                    <button id="login-btn">登录</button>
+                    <button id="register-btn">注册</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        require(['pages/login/index']);
+    </script>
+</html>

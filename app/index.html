@@ -1,3 +1,8 @@
 <script>
-    location.href = '/pages/home'
+    var isLogin = sessionStorage.getItem("login"); 
+    if(isLogin == 'true'){
+        location.href = '/pages/home'
+    }else{
+        location.href = "/pages/login";
+    }
 </script>

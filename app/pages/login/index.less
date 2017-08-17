@@ -1,0 +1,56 @@
+@import "../../res/css/common/common.less";
+@import "../../res/css/common/popup.less";
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin:0;
+    padding:0;
+    background:#f0f0f0;
+    .main{
+        display: flex;
+        //flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        width:100%;
+        height:100%;
+        .login-box{
+            text-align: center;
+            background: #fff;
+            box-shadow: 5px 5px 5px #ccc;
+            border-radius: 10px;
+            padding:20px;
+            width:400px;
+            height: 400px;
+            .item{
+                margin:20px;
+                input{
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+                    border:1px solid #bbb;
+                    border-radius:5px;
+                    font-size: 16px;
+                }
+                button{
+                    float: left;
+                    width:49%;
+                    height: 40px;
+                    color: #fff;
+                    border:0;
+                    &#login-btn{
+                        background-color: #337ab7;
+                        margin-right: 2%;
+                    }
+                    &#register-btn{
+                        background:#f0ad4e;
+                    }
+                }
+            }
+        }
+    }
+}

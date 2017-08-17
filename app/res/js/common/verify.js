@@ -1,6 +1,6 @@
 (function(fn) {
     if (window.define) { // require
-        define(["vendor/validator/validator.min"], fn);
+        define(["res/vendor/validator/validator.min"], fn);
     } else { // 直接引用
         window.verify = fn();
     }

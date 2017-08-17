@@ -1,4 +1,4 @@
-define('module/md5/md5',[],function(){
+define('res/vendor/md5/md5',[],function(){
 	var hexcase = 0;
 	var b64pad = "";
 	var chrsz = 8;

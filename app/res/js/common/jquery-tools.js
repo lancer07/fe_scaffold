@@ -43,10 +43,10 @@ define('res/js/common/jquery-tools',function() {
         };
 
         if (typeof param == 'string') {
-            param += '&YII_CSRF_TOKEN=' + SYS_CONF.csrf_token
+            //param += '&YII_CSRF_TOKEN=' + SYS_CONF.csrf_token
         } else {
             param = param || {};
-            param.YII_CSRF_TOKEN = SYS_CONF.csrf_token;
+            //param.YII_CSRF_TOKEN = SYS_CONF.csrf_token;
         }
 
         showLoading && $.loading.show();
