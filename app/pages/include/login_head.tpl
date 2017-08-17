@@ -13,12 +13,4 @@
             urlArgs: "v=" + buildNum
         })
     </script>
-
-    <script>
-        var isLogin = sessionStorage.getItem("login"); 
-        if(isLogin != 'true'){
-           location.href = "/pages/login";
-        }
-    </script>
-
 </head>
