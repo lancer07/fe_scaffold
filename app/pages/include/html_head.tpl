@@ -4,6 +4,12 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fe_scaffold</title>
+    <script>
+        var isLogin = sessionStorage.getItem("login"); 
+        if(isLogin != 'true'){
+           location.href = "/pages/login";
+        }
+    </script>
     <script src="/res/vendor/jquery/jquery-1.11.1.min.js"></script>
     <script src="/res/vendor/requirejs/requirejs.js"></script>
     <script>
@@ -13,12 +19,4 @@
             urlArgs: "v=" + buildNum
         })
     </script>
-
-    <script>
-        var isLogin = sessionStorage.getItem("login"); 
-        if(isLogin != 'true'){
-           location.href = "/pages/login";
-        }
-    </script>
-
 </head>
