@@ -41,13 +41,13 @@ fis.media('prod').match('*.js', {
 
 fis.set('project.ignore', [
   'node_modules/**',
-  'res/less/**',
-  'res/vendor/**',
+  //'res/less/**',
+  //'res/vendor/**',
   'res/build/**',
-  'res/vue/**',
+  //'res/vue/**',
   //'tests/**',
   '.git/**',
-  'webpack.vue.base.config.js',
-  'fis-conf.js',
-  'package.json'
+  'webpack.vue.base.config.js'
+  //'fis-conf.js',
+  //'package.json'
 ]);

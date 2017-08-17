@@ -3,6 +3,7 @@ define([
     'res/js/common/tab',
     'res/js/common/table',
     'res/js/common/popup',
+    'res/js/common/switch',
     'res/js/common/jquery-tools'
 ],
 function(template,tab){
