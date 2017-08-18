@@ -7,10 +7,7 @@ describe('Demo演示页面测试', function () {
 	after(function () {
 		
 	});
-	it('table组件测试', function (done) {
-		require(['pages/demos/ui/index'], function (fn) {
-            expect(fn.changePassword).to.be.a('function');
-			done();
-		});
+	it('table组件测试', function () {
+		
 	});
 });

@@ -41,9 +41,9 @@ fis.media('prod').match('*.js', {
 
 fis.set('project.ignore', [
   'node_modules/**',
-  //'res/less/**',
+  'res/less/**',
   //'res/vendor/**',
-  'res/build/**',
+  //'res/build/**',
   //'res/vue/**',
   //'tests/**',
   '.git/**',

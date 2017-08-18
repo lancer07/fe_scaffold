@@ -10,7 +10,7 @@ describe('树组件测试', function () {
 	});
 
 	it('变量类型检测', function (done) {
-		require(['components/tree/index'], function (tree) {
+		requirejs(['components/tree/index'], function (tree) {
 			expect(tree).to.be.a('function');
 			expect(tree(1, 1)).to.be.equal(2);
 			done();

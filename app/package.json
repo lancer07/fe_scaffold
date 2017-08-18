@@ -8,7 +8,10 @@
     "build:vue": "npm run build:vue:dll && npm run build:base:vue -- --prod",
     "dev:vue": "npm run build:base:vue -- --dev --watch",
     "build:fis": "fis3 release prod -d ../dist",
-    "dev:fis": "fis3 server start --port 12345 && fis3 release -wL"
+    "dev:fis": "fis3 server start --port 12345 && fis3 release -wL",
+    "dev" : "npm run dev:fis",
+    "test:api" : "mocha tests/api",
+    "test" : "npm run test:api"
   },
   "dependencies": {
     "classnames": "^2.2.3",

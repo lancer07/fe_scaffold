@@ -245,6 +245,7 @@ define('res/js/common/jquery-tools',function() {
          var el = document.createElement('pre');
          var text = document.createTextNode(str);
          el.appendChild(text);
+         //return s;
          return el.innerHTML.replace(/\"/g, '&#34;').replace(/\'/g, '&#39;');
      }
 
