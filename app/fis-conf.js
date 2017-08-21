@@ -43,11 +43,9 @@ fis.set('project.ignore', [
   'node_modules/**',
   'res/less/**',
   //'res/vendor/**',
-  //'res/build/**',
-  'res/vue/pages/**',
+  'res/vue/**',
   //'tests/**',
-  '.git/**',
-  'webpack.vue.base.config.js'
+  '.git/**'
   //'fis-conf.js',
   //'package.json'
 ]);

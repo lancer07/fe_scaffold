@@ -17,8 +17,8 @@
                 </div>
             </div>
         </div>
-        <VueTips v-model="isShowTips" delay="2000" v-bind:type="tipsType">
-            {{tipsMessage}}
+        <VueTips v-model="tips.isShow" delay="2000" v-bind:type="tips.type">
+            {{tips.message}}
         </VueTips>
     </div>
 </template>
@@ -36,33 +36,35 @@ export default {
             username : '',
             userpsw : '',
             userpsw2 : '',
-            isShowTips: false,
-            tipsType : 'warning',
-            tipsMessage: ""
+            tips : {
+                isShow : false,
+                type : 'warning',
+                message : ''
+            }
         }
     },
     methods: {
         register () {
             if(this.userpsw == "" || (this.userpsw != this.userpsw2)) {
-                this.tipsMessage = '输入的密码不正确';
-                this.tipsType = 'warning';
-                this.isShowTips = true;
+                this.tips.message = '输入的密码不正确!';
+                this.tips.type = 'warning';
+                this.tips.isShow = true;
                 return
             }
 
             if(localStorage.getItem(this.username)){
-                this.tipsMessage = '此用户名已存在';
-                this.tipsType = 'warning';
-                this.isShowTips = true;
+                this.tips.message = '此用户名已存在!';
+                this.tips.type = 'warning';
+                this.tips.isShow = true;
                 return
             }
 
             localStorage.setItem(this.username, md5(this.userpsw)); 
-            this.tipsMessage = '注册成功';
-            this.tipsType = 'success';
-            this.isShowTips = true;
+            this.tips.message = '注册成功!';
+            this.tips.type = 'success';
+            this.tips.isShow = true;
             setTimeout(function(){
-                window.location.href = "/pages/login";
+                window.location.href = "/pages/login/";
             },1000)
         }
     }
