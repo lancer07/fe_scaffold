@@ -1,6 +1,6 @@
 <template>
     <transition name="tips-fade">  
-        <div v-show="visible" class="tips clearfix warning">
+        <div v-show="visible" class="tips clearfix" v-bind:class="type">
             <i class="tips-icon"></i>
             <span class="tips-txt">
                 <slot></slot>
@@ -16,6 +16,10 @@
         name: 'VueTips',
         mixins: [Popup],
         props: {
+            type : {
+                type: String,
+                default: "warning"
+            },
             delay: {
                 type: String,
                 default: "4000"
