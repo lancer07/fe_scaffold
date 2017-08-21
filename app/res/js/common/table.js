@@ -1,4 +1,10 @@
-define('res/js/common/table', ['res/js/common/tab', 'res/js/common/jquery-tools', 'res/js/common/pager', 'res/js/common/popup'], function(tab) {
+define('res/js/common/table', [
+	'res/js/common/template',
+	'res/js/common/tab', 
+	'res/js/common/jquery-tools', 
+	'res/js/common/pager', 
+	'res/js/common/popup'
+], function(template,tab) {
 	$.tableFieldSort = $.Class(function(changeHash) {
 		var getType = function(table) {
 			var obj = $.changeHash();
@@ -487,8 +493,15 @@ define('res/js/common/table', ['res/js/common/tab', 'res/js/common/jquery-tools'
 									}
 									data.data["操作系统"] = osList;
 								}
-								var height = $self.parents('.common-content-tools').next('.filter-choice').empty().show().append($.tpl($('#' + $self.attr('data-tpl')).html(), data.data)).css('height').replace('px', '');
-								if ($self.attr('data-auto-limit') == 'true') {
+								// var height = $self.parents('.common-content-tools').next('.filter-choice').empty().show()
+								// 	.append($.tpl($('#' + $self.attr('data-tpl')).html(), data.data))
+								// 	.css('height').replace('px', '');
+								
+								var height = $self.parents('.common-content-tools').next('.filter-choice').empty().show()
+									.append(template($('#' + $self.attr('data-tpl')).html(), data.data))
+									.css('height').replace('px', '');
+								
+									if ($self.attr('data-auto-limit') == 'true') {
 									$.changeHash({
 										tags:'',
 										limit: parseInt($.changeHash().limit) - parseInt(parseInt(height) / 38)
@@ -778,33 +791,11 @@ define('res/js/common/table', ['res/js/common/tab', 'res/js/common/jquery-tools'
 			 * @return {[type]}     [description]
 			 */
 			replaceContent: function(tpl) {
-				tpl = $.tpl($('#' + tpl).html());
+				//tpl = $.tpl($('#' + tpl).html());
+
+				tpl = template($('#' + tpl).html());
 				this.content.html(tpl);
 				this.replaceContentFlag = true;
-				// var tags = this.content.find('.lists-tab-tags01');
-				// var hash = $.changeHash();
-				// var self = this;
-				// tags.each(function(){
-				//     var $this = $(this);
-				//     var name = $(this).attr('data-name');
-				//     var el;
-				//     if (name && hash[name]) {
-				//         el = $this.find('a[data-value="'+hash[name]+'"]');
-				//     }
-				//     if (!el || el.length == 0) {
-				//         el = $this.find('a:first');
-				//     };
-				//     el.addClass('cur');
-				//     var obj = {};
-				//     obj[name] = el.attr('data-value');
-				//     $.changeHash(obj);
-
-				//     var tpl = el.attr('data-tpl');
-				//     if (tpl) {
-				//         tpl = $.tpl($('#' + tpl).html());
-				//         self.container.find('.lists-tag-cont').html(tpl);
-				//     };
-				// })
 				this.tableSort();
 				this.replaceContentEvent();
 			},
@@ -949,18 +940,23 @@ define('res/js/common/table', ['res/js/common/tab', 'res/js/common/jquery-tools'
 						$('#selectCurrentPage').attr('checked', false);
 						checked = true;
 					}
-					var tpl = $.tpl($('#' + table.attr('data-tpl')).html(),data);
+					//var tpl = $.tpl($('#' + table.attr('data-tpl')).html(),data);
+					var tpl = template($('#' + table.attr('data-tpl')).html(),data);
+					
 				}
 				table.find("tbody").html(tpl);
-				this.setStatus(this);
+				
 
 				if (table.attr('data-head')) {
-					var tpl_head = $.tpl($('#' + table.attr('data-head')).html(),data);
+					//var tpl_head = $.tpl($('#' + table.attr('data-head')).html(),data);
+					var tpl_head = template($('#' + table.attr('data-head')).html(),data);
+					
 					table.find("thead").html(tpl_head);
 				}
 				//渲染自定义列的表头
 				if(table.attr('data-head-custom')){
-					var tpl_head_custom = $.tpl($('#' + table.attr('data-head-custom')).html(),selectedCols);
+					//var tpl_head_custom = $.tpl($('#' + table.attr('data-head-custom')).html(),selectedCols);
+					var tpl_head_custom = template($('#' + table.attr('data-head-custom')).html(),selectedCols);
 					table.find("thead").html(tpl_head_custom);
 
 					//渲染排序icon
@@ -1026,21 +1022,6 @@ define('res/js/common/table', ['res/js/common/tab', 'res/js/common/jquery-tools'
 					});
 					$(selector).html(crumbs);
 				};
-			},
-			//单点checkbox
-			setStatus : function(self) {
-				if(self.hash.level) {
-					var level = (self.hash.level).split(',');
-					for(var i = 0 ; i < level.length ; i ++) {
-					if(level[i] == 1) {
-						$('#sugClean').prop('checked',true);
-					} else if(level[i] == 2) {
-						$('#opClean').prop('checked',true);
-					} else if(level[i] == 4) {
-						$('#sugSave').prop('checked',true);
-					}
-				}
-				}
 			},
 			//获取自定义的全选提示
 			getCustomTip: function() {

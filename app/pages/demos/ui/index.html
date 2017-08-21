@@ -102,15 +102,15 @@
         </table>
     </script>
     <script type="text/html" id="data-table-content">
-    {for(var i=0;i<opts.list.length;i++)}
-    {js var item=opts.list[i]}
-    {js var cls="";if(i%2==1)cls+= " tra";}
-    <tr class="{cls} {if(item.is_online==false)}off-line{/if}" data-id="{item.id}">
-        <td title=""><input type="checkbox" data-id="{item.id}"><span class="security-name">{item.id}</span></td>
-        <td title="{item.ip}">{item.ip}</td>
-        <td title="{item.gname}">{item.gname}</td>
+   
+    <% for (var i = 0; i < list.length; i++) { %>
+    <% var cls="";if(i%2==1)cls+= " tra"; %>
+    <tr class="<%- cls %>" data-id="<%- list[i].id %>">
+        <td title=""><input type="checkbox" data-id="<%- list[i].id %>"><span class="security-name"><%- list[i].id %></span></td>
+        <td title="<%- list[i].ip %>"><%- list[i].ip %></td>
+        <td title="<%- list[i].gname %>"><%- list[i].gname %></td>
     </tr>
-    {/for}
+    <% } %>
     </script>
 
 
