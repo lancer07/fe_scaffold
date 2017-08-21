@@ -223,7 +223,6 @@ define('res/js/common/table', [
 				curpage = 1;
 				this.container.delegates({
 					'.common-content-tools a[data-request="true"]': function(event) {
-						//
 						event.preventDefault();
 						var def = new $.Deferred();
 						$this = $(this);
@@ -258,13 +257,6 @@ define('res/js/common/table', [
 									if ($this.attr('data-refresh')) {
 										self.request();
 									}
-									/*if($this.attr('task-refresh')){
-										$.getJson('/task/index/current',true).then(function(res){
-											var arr = $('.have-task').text().split(' ');
-											arr[0] = res.name+'&nbsp';
-											$('.have-task').html(arr.join(''));
-										})
-									}*/
 								})
 							}
 						}else{
@@ -280,14 +272,6 @@ define('res/js/common/table', [
 									if ($this.attr('data-refresh')) {
 										self.request();
 									}
-
-									/*if($this.attr('task-refresh')){
-										$.getJson('/task/index/current',true).then(function(res){
-											var arr = $('.have-task').text().split(' ');
-											arr[0] = res.name+'&nbsp';
-											$('.have-task').html(arr.join(''));
-										})
-									}*/
 								})
 							});
 						}
@@ -371,8 +355,6 @@ define('res/js/common/table', [
 							GID = gid;
 							CURPAGE = curpage;
 						}
-
-
 						if (!checked) {
 							//勾选终端的checkedbox会自动取消掉(因为载入过程(loading)中，勾选了也会累加checkedLength），但当loading消失时，其实才算是完全加载页面。此时会将所有勾选的选项都清除。但self.checkedLength会累加勾选
 							if(limit - totalNum >= 0){
@@ -393,8 +375,6 @@ define('res/js/common/table', [
 							} else {
 								self.checkLength++;
 							}
-
-
 						}
 
 						if (self.checkLength == totalNum ) {
@@ -493,10 +473,6 @@ define('res/js/common/table', [
 									}
 									data.data["操作系统"] = osList;
 								}
-								// var height = $self.parents('.common-content-tools').next('.filter-choice').empty().show()
-								// 	.append($.tpl($('#' + $self.attr('data-tpl')).html(), data.data))
-								// 	.css('height').replace('px', '');
-								
 								var height = $self.parents('.common-content-tools').next('.filter-choice').empty().show()
 									.append(template($('#' + $self.attr('data-tpl')).html(), data.data))
 									.css('height').replace('px', '');
@@ -604,17 +580,7 @@ define('res/js/common/table', [
 					},
 
 					'.filter-empty': function() {
-						// var filterData = {}, filterKey = $(this).closest('.filter-choice').data("filter-key");
 						$('.btn-filter').click();
-						// $('.filter-choice').hide().empty();
-						// $('.btn-filter').removeClass('active');
-						// $.changeHash({
-						// 	tags: null,
-						// 	is_online:null,
-						// 	believe: null
-						// });
-						// filterData[filterKey ? filterKey : "tags"] = null;
-						// $.changeHash(filterData);
 					},
 					'.export': function() {
 						var pars = $.changeHash();
@@ -723,24 +689,6 @@ define('res/js/common/table', [
 						})
 					}
 					if(showConfirm){
-						/*$.popup({
-							title: '提示',
-							content: '<p class="confirm-tip">'+confirm+'</p>',
-							confirm: {
-								text: '确认',
-								callback: function(self) {
-									operate();
-									self.close();
-								}
-							},
-							cancel: {
-								text: '取消',
-								callback: function(self) {
-									self.close();
-								}
-							},
-							closeTrigger: 'cancel'
-						});*/
 						$.confirm({
 							message:confirm
 						}).done(function(result){
@@ -791,8 +739,6 @@ define('res/js/common/table', [
 			 * @return {[type]}     [description]
 			 */
 			replaceContent: function(tpl) {
-				//tpl = $.tpl($('#' + tpl).html());
-
 				tpl = template($('#' + tpl).html());
 				this.content.html(tpl);
 				this.replaceContentFlag = true;
@@ -940,7 +886,6 @@ define('res/js/common/table', [
 						$('#selectCurrentPage').attr('checked', false);
 						checked = true;
 					}
-					//var tpl = $.tpl($('#' + table.attr('data-tpl')).html(),data);
 					var tpl = template($('#' + table.attr('data-tpl')).html(),data);
 					
 				}
@@ -948,14 +893,12 @@ define('res/js/common/table', [
 				
 
 				if (table.attr('data-head')) {
-					//var tpl_head = $.tpl($('#' + table.attr('data-head')).html(),data);
 					var tpl_head = template($('#' + table.attr('data-head')).html(),data);
 					
 					table.find("thead").html(tpl_head);
 				}
 				//渲染自定义列的表头
 				if(table.attr('data-head-custom')){
-					//var tpl_head_custom = $.tpl($('#' + table.attr('data-head-custom')).html(),selectedCols);
 					var tpl_head_custom = template($('#' + table.attr('data-head-custom')).html(),selectedCols);
 					table.find("thead").html(tpl_head_custom);
 
