@@ -29,20 +29,30 @@ fis.match('res/images/*.png', {
 });
 
 fis.match('*.{html,tpl}', {
-  optimizer: fis.plugin('html-minifier'),
+  optimizer: fis.plugin('html-minifier',{
+    processConditionalComments : true
+  }),
   useMap: true
 });
 
-fis.media('prod').match('*.js', {
+fis.media('prod')
+.match('*.js', {
     isMod: true,
-    optimizer: fis.plugin('uglify-js')
-    //skipBuiltinModules : true
-});
+    optimizer: fis.plugin('uglify-js'),
+    skipBuiltinModules : true
+})
+.match('*.{html,tpl}', {
+    optimizer: fis.plugin('html-minifier',{
+      processConditionalComments : true,
+      minifyJS : true,
+      trimCustomFragments : true
+    })
+})
 
 fis.set('project.ignore', [
   'node_modules/**',
   'res/less/**',
-  //'res/vendor/**',
+  'res/vendor/**', // 打包时，忽略
   'res/vue/**',
   //'tests/**',
   '.git/**'

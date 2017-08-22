@@ -631,18 +631,20 @@ i.switch.disabled {
   background: url(/res/img/common/loading.png) no-repeat;
 }
 .tips {
-  position: absolute;
-  left: 50%;
-  top: 90px;
+  position: fixed;
+  right: 10px;
+  top: 30px;
   z-index: 1052;
-  width: 740px;
+  width: 300px;
   line-height: 30px;
+  padding: 5px 15px;
   background: #6da14e;
-  background: rgba(109, 161, 78, 0.8);
+  background: rgba(109, 161, 78, 0.9);
   border: 1px solid #629146;
   margin-left: -370px;
   color: #fff;
   font-size: 14px;
+  box-shadow: 5px 5px 5px #ccc;
 }
 .tips .tips-icon {
   -webkit-appearance: none;
@@ -672,7 +674,7 @@ i.switch.disabled {
 }
 .tips.warning {
   background: #fa7f2e;
-  background: rgba(250, 127, 46, 0.8);
+  background: rgba(250, 127, 46, 0.9);
   border-color: #e17229;
 }
 .tips.warning .tips-icon:before {
@@ -5441,10 +5443,10 @@ body {
   border: none;
 }
 body {
-  padding: 10px;
   margin: 0;
 }
 body dl {
+  padding: 10px;
   margin-bottom: 30px;
   padding-bottom: 30px;
   border-bottom: 1px dashed #ccc;

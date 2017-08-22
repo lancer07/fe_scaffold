@@ -203,10 +203,11 @@ define('res/js/common/popup', ['res/js/common/jquery-tools'], function() {
 			$('#tips .tips-txt').css({
 				width: (width - 50)
 			});
-		} else {
-			var topValue = Math.max(document.body.scrollTop, document.documentElement.scrollTop, 20);
-			$('#tips').css('top', topValue);
 		}
+		//  else {
+		// 	var topValue = Math.max(document.body.scrollTop, document.documentElement.scrollTop, 20);
+		// 	$('#tips').css('top', topValue);
+		// }
 		clearTimeout(tipsTimer);
 		tipsTimer = setTimeout(function() {
 			if (config.callback) config.callback();

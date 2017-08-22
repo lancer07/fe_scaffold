@@ -24,7 +24,7 @@
 </template>
 
 <script>
- import md5 from "blueimp-md5"
+import md5 from "blueimp-md5"
 import VueTips from "../../../components/VueTips"
 
 export default {
@@ -75,8 +75,8 @@ export default {
     @import "../../../../css/common/common.less";
     body{
         background:#f0f0f0;
-        padding:0;
-        margin:0;
+        padding:0px;
+        margin:0px;
         .main{
             display: flex;
             //flex-direction: row;
