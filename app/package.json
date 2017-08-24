@@ -7,8 +7,6 @@
     "build:vue:dll": "npm run build:base:vue -- --dll",
     "build:vue": "npm run build:vue:dll && npm run build:base:vue -- --prod",
     "build:fis": "fis3 release prod -d ../dist",
-    "build:js": "r.js -o build.js",
-    "build": "",
     "dev:vue": "npm run build:base:vue -- --dev --watch",
     "dev:fis": "fis3 server start --port 12345 && fis3 release -wL",
     "test:api": "mocha tests/api",

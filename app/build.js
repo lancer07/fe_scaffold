@@ -12,7 +12,7 @@
     return {
         appDir: './', 
         baseUrl: './',
-        dir: '../dist2',　
+        dir: '../dist',　
         modules: pages,
         fileExclusionRegExp: exclude,
         //optimizeCss: 'standard',

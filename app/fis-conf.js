@@ -1,3 +1,4 @@
+var requirejs = require('./r.js');
 fis.match('::package', {
   spriter: fis.plugin('csssprites'),
   postpackager: fis.plugin('loader', {
@@ -9,10 +10,6 @@ fis.match('::package', {
 fis.match('*', {
   useHash: false
 });
-
-// fis.match('./res/js/*.js', {
-//   optimizer: fis.plugin('uglify-js')
-// });
 
 fis.match('{components,pages}/*.less', {
   parser: fis.plugin('less'),
@@ -35,12 +32,20 @@ fis.match('*.{html,tpl}', {
   useMap: true
 });
 
+fis.media('prod').match('pages/**.js', {
+  postprocessor: function (content, file, settings) {
+      requirejs.optimize({
+          baseUrl: './',
+          name: file.subpathNoExt.slice(1),
+          out: '../dist/' + file.subpath,
+          //optimize: 'none'
+      }, function (resultText) {
+          console.log('requirejs.optimize:\n===================\n' + resultText);
+      });
+  }
+});
+
 fis.media('prod')
-.match('*.js', {
-    isMod: true,
-    optimizer: fis.plugin('uglify-js'),
-    skipBuiltinModules : true
-})
 .match('*.{html,tpl}', {
     optimizer: fis.plugin('html-minifier',{
       processConditionalComments : true,
