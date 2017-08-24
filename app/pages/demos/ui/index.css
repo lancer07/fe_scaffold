@@ -3279,8 +3279,8 @@ td a {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/res/module/font-awesome-master/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('/res/module/font-awesome-master/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('/res/module/font-awesome-master/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('/res/module/font-awesome-master/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('/res/module/font-awesome-master/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('/res/vendor/font-awesome-master/fonts/fontawesome-webfont.eot?v=4.2.0');
+  src: url('/res/vendor/font-awesome-master/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('/res/vendor/font-awesome-master/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('/res/vendor/font-awesome-master/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('/res/vendor/font-awesome-master/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
