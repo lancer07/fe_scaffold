@@ -6,11 +6,13 @@
     "build:base:vue": "webpack --config webpack.vue.base.config.js --progress --profile --color",
     "build:vue:dll": "npm run build:base:vue -- --dll",
     "build:vue": "npm run build:vue:dll && npm run build:base:vue -- --prod",
-    "dev:vue": "npm run build:base:vue -- --dev --watch",
     "build:fis": "fis3 release prod -d ../dist",
+    "build:js": "r.js -o build.js",
+    "build": "",
+    "dev:vue": "npm run build:base:vue -- --dev --watch",
     "dev:fis": "fis3 server start --port 12345 && fis3 release -wL",
-    "test:api" : "mocha tests/api",
-    "test" : "npm run test:api"
+    "test:api": "mocha tests/api",
+    "test": "npm run test:api"
   },
   "dependencies": {
     "classnames": "^2.2.3",
@@ -64,7 +66,7 @@
     "lodash": "^4.17.2",
     "mocha": "~2.3.4",
     "mochawesome": "^1.2.2",
-    "requirejs": "^2.3.4",
+    "requirejs": "^2.3.5",
     "requirejs-mock": "^1.0.1",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.0",
