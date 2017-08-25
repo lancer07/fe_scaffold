@@ -1,5 +1,4 @@
 define('res/js/common/search', [
-	'res/js/common/jquery-tools',
 	'res/js/common/ipfilter'
 ], function() {
 	var search = {

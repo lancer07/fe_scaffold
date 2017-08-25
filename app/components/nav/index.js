@@ -1,5 +1,4 @@
 define([
-	'res/js/common/jquery-tools'
 ],function(){
 	$(document.body).delegates({
         'nav li' : function(){

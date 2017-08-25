@@ -1,4 +1,4 @@
-define('res/js/common/popup', ['res/js/common/jquery-tools'], function() {
+define('res/js/common/popup', function() {
 	$.popup = $.Class(function() {
         var isIE8 = !!window.ActiveXObject && document.documentMode;
 		return {

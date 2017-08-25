@@ -1,4 +1,4 @@
-define('res/js/common/upgrade_main', ['res/js/common/jquery-tools', 'res/js/common/upgrade'], function(_, Upgrade) {
+define('res/js/common/upgrade_main', ['res/js/common/upgrade'], function(_, Upgrade) {
 	Upgrade.upgrade_list = [];
 
 	resizer();

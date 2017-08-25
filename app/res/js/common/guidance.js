@@ -1,5 +1,4 @@
 define('res/js/common/guidance', [
-	'res/js/common/jquery-tools',
 	'res/js/common/jquery-cookie'
 ], function() {
 	var $steps;

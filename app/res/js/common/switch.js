@@ -1,4 +1,4 @@
-define('res/js/common/switch', ['res/js/common/jquery-tools'], function() {
+define('res/js/common/switch',function() {
 
 	$(document.body).delegates({
 		'.switch': function() {

@@ -1,4 +1,4 @@
-define('res/js/common/slider', ['res/js/common/jquery-tools'], function() {
+define('res/js/common/slider', function() {
 	var slider = {
 		config: {},
 		init: function(config) {

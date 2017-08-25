@@ -1,4 +1,4 @@
-define('res/js/common/tab',['res/js/common/jquery-tools'],function(){
+define('res/js/common/tab',function(){
 	var tab ={
 		/**
 		 * tab的dom范围

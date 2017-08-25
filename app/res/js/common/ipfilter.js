@@ -1,4 +1,4 @@
-define('res/js/common/ipfilter', ['res/js/common/jquery-tools', 'res/js/common/popup'], function() {
+define('res/js/common/ipfilter', ['res/js/common/popup'], function() {
 	$.getIp = function(wrapper, noTips){
 		var $wrap = $(wrapper);
 		var ips = [];

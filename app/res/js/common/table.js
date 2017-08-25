@@ -1,7 +1,6 @@
 define('res/js/common/table', [
 	'res/js/common/template',
-	'res/js/common/tab', 
-	'res/js/common/jquery-tools', 
+	'res/js/common/tab',  
 	'res/js/common/pager', 
 	'res/js/common/popup'
 ], function(template,tab) {

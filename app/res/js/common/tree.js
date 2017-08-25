@@ -1,4 +1,4 @@
-define('res/js/common/tree', ['vendor/jquery.zTree/js/jquery.ztree.all-3.5', 'res/js/common/ipfilter', 'res/js/common/popup', 'res/js/common/jquery-tools', 'res/js/common/group-dropdown'], function() {
+define('res/js/common/tree', ['vendor/jquery.zTree/js/jquery.ztree.all-3.5', 'res/js/common/ipfilter', 'res/js/common/popup', 'res/js/common/group-dropdown'], function() {
 
 	var groupList = [];
 	var hasPeimitNodes = [];

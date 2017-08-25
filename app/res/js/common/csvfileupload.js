@@ -1,4 +1,4 @@
-define('res/js/common/csvfileupload',['res/js/common/jquery-tools','vendor/webuploader/webuploader'],function(){
+define('res/js/common/csvfileupload',['vendor/webuploader/webuploader'],function(){
 	var CSVFileUpload = {
         upLoadPath: null,
         init: function() {

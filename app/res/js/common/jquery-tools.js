@@ -1,4 +1,4 @@
-define('res/js/common/jquery-tools',function() {
+//define('res/js/common/jquery-tools',function() {
 
     $.getJson = function(url, param, showLoading) {
         var def = $.Deferred();
@@ -516,4 +516,4 @@ define('res/js/common/jquery-tools',function() {
                 (mm[1] ? mm : "0" + mm[0]) + '-' +
                 (dd[1] ? dd : "0" + dd[0]);
     };
-});
+//});

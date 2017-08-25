@@ -1,7 +1,6 @@
 require([
 	//'res/js/common/au_modules',
 	'res/js/common/template',
-	'res/js/common/jquery-tools',
 	'res/js/common/jquery-tooltip',
 	'vendor/jquery.cookie/cookie',
 	'vendor/jquery-ui/jquery-ui',

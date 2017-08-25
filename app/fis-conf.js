@@ -45,8 +45,7 @@ fis.media('prod').match('pages/**.js', {
   }
 });
 
-fis.media('prod')
-.match('*.{html,tpl}', {
+fis.media('prod').match('*.{html,tpl}', {
     optimizer: fis.plugin('html-minifier',{
       processConditionalComments : true,
       minifyJS : true,
