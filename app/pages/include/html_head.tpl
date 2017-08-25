@@ -10,10 +10,7 @@
            location.href = "/pages/login";
         }
     </script>
-    <script src="/router-conf.js"></script>
-    <script src="/res/vendor/jquery/jquery-1.11.1.min.js"></script>
-    <script src="/res/js/common/jquery-tools.js"></script>
-    <script src="/res/vendor/requirejs/requirejs.js"></script>
+    <script src="/res/js/base.js"></script>
     <script>
         var buildNum = '0.1.0';
         require.config({
