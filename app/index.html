@@ -1,8 +1,10 @@
 <script>
     var isLogin = sessionStorage.getItem("login"); 
     if(isLogin == 'true'){
-        location.href = '/pages/home';
+        //location.href = '/pages/home';
+        goto('home');
     }else{
-        location.href = "/pages/login";
+        //location.href = "/pages/login";
+        goto('login');
     }
 </script>

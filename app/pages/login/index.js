@@ -16,12 +16,12 @@ function(verify,popup,md5){
                 //     psw : md5.hex_md5($("#userpsw").val())
                 // }).then(function(res) {
                 //     if(res.result == 0){
-                //         location.href = "/pages/home";
+                //         $.goto('home')
                 //         sessionStorage.setItem("login", true); 
                 //     }
                 // });
                 if(localStorage.getItem($('#username').val()) == md5.hex_md5($("#userpsw").val()) ){
-                    location.href = "/pages/home";
+                    $.goto("home");
                     sessionStorage.setItem("login", true); 
                 }else{
                     $.tips('用户名或密码错误');
@@ -29,7 +29,7 @@ function(verify,popup,md5){
             }
         },
         '#register-btn' : function(){
-            window.location.href = '/pages/register';
+            $.goto("register");
         }
 	}).ready(function(){
         
