@@ -11,21 +11,22 @@ function(verify,popup,md5){
                 $.tips(tip, false, 4000);
             });
             if(check){
-                // $.postData('/api/login',{
-                //     username : $('#username').val(),
-                //     psw : md5.hex_md5($("#userpsw").val())
-                // }).then(function(res) {
-                //     if(res.result == 0){
-                //         $.goto('home')
-                //         sessionStorage.setItem("login", true); 
-                //     }
-                // });
-                if(localStorage.getItem($('#username').val()) == md5.hex_md5($("#userpsw").val()) ){
-                    $.goto("home");
-                    sessionStorage.setItem("login", true); 
-                }else{
-                    $.tips('用户名或密码错误');
-                }
+                $.postData('/api/login',{
+                    username : $('#username').val(),
+                    psw : md5.hex_md5($("#userpsw").val())
+                }).then(function(res) {
+                    if(res.result == 0){
+                        $.goto('home')
+                        sessionStorage.setItem("login",'true');
+                        sessionStorage.setItem("csrf_token", res.csrf_token); 
+                    }
+                });
+                // if(localStorage.getItem($('#username').val()) == md5.hex_md5($("#userpsw").val()) ){
+                //     $.goto("home");
+                //     sessionStorage.setItem("login", true); 
+                // }else{
+                //     $.tips('用户名或密码错误');
+                // }
             }
         },
         '#register-btn' : function(){

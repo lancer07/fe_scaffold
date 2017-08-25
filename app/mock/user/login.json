@@ -1,4 +1,5 @@
 {
     "result": 0,
-    "reason": "success"
+    "reason": "success",
+    "csrf_token" : "1234567"
 }

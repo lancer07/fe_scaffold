@@ -8,8 +8,13 @@
             param = {};
         };
 
-        param = param || {};
-        param.t = Math.random();
+        if (typeof param == 'string') {
+            param += '&CSRF_TOKEN=' + sessionStorage.getItem("csrf_token");
+        } else {
+            param = param || {};
+            param.t = Math.random();
+            param.CSRF_TOKEN = sessionStorage.getItem("csrf_token");
+        }
 
         showLoading && $.loading.show();
 
@@ -18,7 +23,12 @@
                 res = JSON.parse(res);
             };
             if (res.result) {
-                if ( !res.is_login && location.href.indexOf('login') == -1 ) setTimeout(function(){top.location.reload();},1000)
+                if (!res.is_login){
+                    setTimeout(function(){
+                        sessionStorage.setItem('login','false');
+                        $.goto('login');
+                    },1000)
+                }
                 $.tips(res.reason ? res.reason : '未知错误', false);
                 def.reject(res);
             } else {
@@ -43,10 +53,10 @@
         };
 
         if (typeof param == 'string') {
-            //param += '&YII_CSRF_TOKEN=' + SYS_CONF.csrf_token
+            param += '&CSRF_TOKEN=' + sessionStorage.getItem("csrf_token");
         } else {
             param = param || {};
-            //param.YII_CSRF_TOKEN = SYS_CONF.csrf_token;
+            param.CSRF_TOKEN = sessionStorage.getItem("csrf_token");
         }
 
         showLoading && $.loading.show();
@@ -56,7 +66,12 @@
                 res = $.parseJSON(res);
             };
             if (res.result) {
-                if ( !res.is_login && location.href.indexOf('login') == -1 ) setTimeout(function(){top.location.reload();},1000)
+                if (!res.is_login){
+                    setTimeout(function(){
+                        sessionStorage.setItem('login','false');
+                        $.goto('login');
+                    },1000)
+                } 
                 $.tips(res.reason?res.reason:'未知错误', false, 2500);
                 def.reject(res);
             } else {
